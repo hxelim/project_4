@@ -6,22 +6,5 @@ a {text-decoration: none; color: #333;}
 
 
 
-$blue : #1E9EFF;
-$lightblue :  #D2ECFF;
-
-
-
-
-@mixin buttonStyle {
-  width: 50px; height: 50px; background-color: $lightblue; border: none; border-radius: 50%; position: relative;
-
-  i {
-    color: $blue;
-    position: absolute;
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-    font-size: 25px;
-  }  
-}
-
 
 

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -28,19 +29,222 @@ a {
   color: #333;
 }
 
-button {
-  width: 50px;
-  height: 50px;
-  background-color: #D2ECFF;
-  border: none;
+html {
+  font-size: 4px;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 5rem;
+}
+
+h6 {
+  font-size: 3.5rem;
+}
+
+p, a {
+  font-size: 4rem;
+}
+
+#wrap {
+  height: 4200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.main {
+  height: 600px;
+}
+.main .container {
+  background-color: pink;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.main .container .category {
+  display: flex;
+}
+.main .container .slide {
+  width: 100%;
+  height: 430px;
+  background-color: aqua;
+}
+.main .container .subNav {
+  width: 60%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main .container .subNav li {
+  width: 90px;
+}
+.main .container .subNav li .box {
+  width: 70px;
+  height: 70px;
+  background-color: gray;
   border-radius: 50%;
+}
+.main .container .subNav li a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  height: 100%;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.recommend {
+  height: auto;
+  background-color: gold;
+}
+.recommend .bookbox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  text-align: center;
+}
+.recommend .bookbox .book {
+  width: 17%;
+  height: 100%;
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.recommend .bookbox .book .bookCover {
+  width: 100%;
+  height: 285px;
+  background-color: gray;
+  border-radius: 8px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
   position: relative;
 }
-button i {
-  color: #1E9EFF;
+.recommend .bookbox .book .bookCover .light {
+  background: rgba(255, 255, 255, 0.4);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 25px;
+  left: 4px;
+  top: 3px;
+  border-radius: 2px;
+  height: 97.5%;
+  width: 2px;
+}
+.recommend .bookbox .book .bookName {
+  background-color: white;
+}
+
+.mdPick {
+  height: 270px;
+  background-color: tomato;
+}
+.mdPick .bookbox {
+  width: 100%;
+  height: 230px;
+  background-color: beige;
+}
+
+.best {
+  height: 440px;
+  background-color: skyblue;
+}
+.best .bookbox {
+  width: 100%;
+  height: 390px;
+  background-color: beige;
+}
+
+.new {
+  width: 100%;
+  height: 500px;
+  background-color: #D2ECFF;
+}
+.new .container {
+  background-color: gold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.new .container .bookbox {
+  width: 100%;
+  height: 350px;
+  background-color: beige;
+  margin: 58px 0;
+}
+
+.academy {
+  height: 400px;
+  background-color: lightgreen;
+}
+.academy .bookbox {
+  width: 100%;
+  height: 350px;
+  background-color: beige;
+}
+
+.event {
+  height: 140px;
+  background-color: bisque;
+}
+.event .bookbox {
+  width: 100%;
+  height: 100px;
+  background-color: beige;
+}
+
+.hit {
+  height: 280px;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+.hit .boxL {
+  width: 25%;
+  background-color: aqua;
+}
+.hit .boxR {
+  width: 75%;
+  background-color: pink;
+}
+.hit .boxR .bookbox {
+  height: 280px;
+  background-color: beige;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+.hit .boxR .bookbox li {
+  width: 280px;
+  height: 100%;
+  background-color: gray;
+  border-radius: 50%;
 }

@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import "reset","mixin","var";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {font-family: "Noto Sans KR", sans-serif;}
+
+
+// 헤더
+header {
+  width: 100%; height: 170px;
+
+  // 헤더 탑
+  .headerTop {
+    width: 100%; height: 40px; border-bottom: 2px solid $lightblueT;
+
+    .container{
+       @include flex;
+       font-weight: $fontW_B;
+      .navL { 
+        @include flex;
+
+        li:first-child a {color: black;}
+      }
+      .navR {
+        @include flex;
+      }
+      
+      li {
+        margin: 0 30px 0 0 ;
+
+        &:last-child {
+          margin-right: 0;
+        }
+        a {color: $gray; font-size: $fontS_S;}
+      }
+      
+    }
+  }
+
+  // 헤더 바텀
+  .headerBottom {
+    .container {
+      display: flex; flex-wrap: wrap; align-content: space-between;
+
+      height: 140px;
+      padding: 15px 0;
+      border-bottom: 2px solid $lightblueT;
+
+      // 헤더바텀의 윗줄
+      .hBline1{
+        @include flex; 
+        height: 40px; width: 100%;
+
+        .ridiWebtoon {
+          width: 250px; font-size: 9rem; font-weight: 1000; letter-spacing: -1px; line-height: 40px; display: flex;
+
+          .Word1 {
+              color: $blue;
+            }
+          }
+
+        .Rbox {
+          @include flex;
+          height: 100%; 
+          
+          .search {width: 270px ; height: 100%; background-color: $lightgray; border-radius: 10px; @include flex;
+          
+            i {font-size: $fontS_B; line-height: $fontS_B; margin-left:15px; color: $gray; opacity: 0.5;}
+            input {width: 85%; height: 100%; background: none; border: none;
+              &:focus {
+                outline: none
+              }
+              caret-color: $blue;
+            } 
+            
+
+          }
+          .icons {
+            @include flex; width: 200px;  height: 100%; margin-left: 30px; 
+
+            .icon {width: 20%; height: 100%; display: flex; justify-content: center; align-items: center;
+              svg {font-size: 8rem}
+            }
+          }
+        }
+      }
+
+      // 헤더바텀의 아래줄
+      .hBline2 {
+        @include flex;
+        width: 100%; height: 40px; 
+        
+        .menu {
+          display: flex; 
+          li {
+            margin-right: 20px;
+
+            &:first-child a {color: $blue;}
+
+              a {
+                font-size: $fontS_L; font-weight: $fontW_B;
+              }
+            }
+          }
+
+          .totalCategory {
+            @include flex;
+
+            i {font-size: $fontS_B; line-height: $fontS_B;}
+            p {font-weight: $fontW_B; margin-left: 10px;}
+          }
+        
+
+      }
+
+
+    }
+
+  }
+
+}
+
+// 푸터
+footer {width: 100%; height: 600px; background-color: aqua;}
+
