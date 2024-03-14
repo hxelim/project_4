@@ -2,29 +2,37 @@
 @import "reset","mixin","var";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-// button.prev {
-//   @include btnPrev;
-// }
 
-// button.next {
-//   @include btnNext;
-// }
 
 #wrap {height: 4200px; width: 100%; display: flex; flex-direction: column; justify-content: space-between;}
 
 .container {width: 1170px; height: 100%; margin: 0 auto;}
 
+img {width: 100%; height: 100%; object-fit: cover;}
+
+
 .main {
   height: 600px; 
   .container {
-    background-color: pink; display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between; 
+    @include flex; flex-wrap: wrap;
     .category {
-      display: flex;
+      @include flex; width: 15%;
+      
+      a {
+        font-size: $fontS_L;
+      }
+
+      li:first-child a {font-weight: $fontW_B;}
     }
-    .slide {
+    .slideWrap {
       width: 100%;
       height: 430px;
       background-color: aqua;
+      position: relative;
+
+      .btn {
+        @include btn;
+      }
     }
     .subNav {
       width: 60%; height: 100px;  margin: 0 auto; display: flex; justify-content: space-between;
@@ -41,13 +49,12 @@
 
 .recommend {
   height: auto;
-  background-color: gold;
   // @include flex; flex-wrap: wrap; 
   
 
-  .bookbox {width: 100%; @include flex; text-align: center; 
+  .bookbox {width: 100%; @include flex; text-align: center; height: 80%;
     
-    .book {width: 17%; height: 100%; background-color: pink; @include flex; flex-wrap: wrap; justify-content: center;
+    .book {width: 17%; height: 100%; @include flex; flex-wrap: wrap; justify-content: center;
     
     .bookCover {width: 100%; height: 285px; background-color: gray; border-radius: 8px; box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4); margin-bottom: 15px; position: relative;
     
@@ -62,66 +69,176 @@
 }
 
 .mdPick {
-  height: 270px;
-  background-color: tomato;
+  height: auto;
   // @include flex; flex-wrap: wrap; 
 
 
-  .bookbox {width: 100%; height: 230px; background-color: beige;}
+  .bookbox {width: 100%; height: 230px;
+    @include flex;
+  
+    .book {width: 32%; height: 100%;
+      .bookImg {height: 70%; position: relative;
+
+        .bg {height: 70%; width: 100%; background-color: gold; position: absolute; bottom: 0; border-radius: 10px;}
+
+        .bookCover {width: 110px; height: 100%; background-color: gray; position: absolute; left: 50%; transform: translateX(-50%); border-radius: 8px;}
+      }
+
+      .bookNamebox {
+        text-align: center;
+      }
+    }
+  }
   
 }
 
 .best {
   height: 440px;
-  background-color: skyblue;
-
-  // @include flex; flex-wrap: wrap; 
+  @include btn_show;
 
 
-  .bookbox {width: 100%; height: 390px; background-color: beige;}
+  .bookbox {width: 100%; height: 390px; position: relative;
+  
+    .bookcontainer {width: 201.6%; height: 100%; @include flex;
 
-}
+    
+      .bestlist {width: 16%; height: 100%;
+      
+        ol {width: 100%; height: 100%;
+          @include flex; flex-wrap: wrap;
+
+          .book {width: 100%; height: 32%; background-color: lightcoral; @include flex;
+
+            .bookCover {width: 25%; height: 100%; background-color: lightblue; border-radius: 8px;}
+
+            .bookNamebox {width: 55%}
+        }
+
+        } 
+      } 
+    }
+
+    .btn {
+      @include btn;
+    }
+  }
+
+    }
 
 .new {
   width: 100%;
-  height: 500px;
   background-color: $lightblue;
+  @include btn_show;
 
-  .container {background-color: gold;
-    @include flex; flex-wrap: wrap; 
+  .container {@include flex; flex-wrap: wrap; 
+    .title {margin-top: 20px;}
 
+  .bookcontainer {width: 100%; height: 350px; margin: 15px 0 30px 0; @include flex; position: relative; 
+  
+    .boxL {width: 50%; height: 100%;  @include flex;
+    
+      .bookCover {width: 230px; background-color: gray; height: 100%; border-radius: 8px;}
 
-  .bookbox {width: 100%; height: 350px; background-color: beige; margin: 58px 0;}
+      .bookintro {width: 50%; height: 50%;}
+    }
+    .boxR {width: 40%; height: 60%;
+      .bookWrap {
+        width: 204%; height: 100%; @include flex;
+        .bookbox {
+          width: 15%; height: 100%; text-align: center;
+
+          .bookCover {width: 100%; height: 85%; background-color: gray; border-radius: 8px;}
+        }
+      }
+    }
+    .btn {@include btn; position: absolute; width: 100%; height: 100%;}
+
+    
+  }
 
 
   }
 }
 
 .academy {
-  height: 400px;
-  background-color: lightgreen;
+  @include btn_show;
+  height: auto; position: relative; 
+  .academybook {width: 100%;
+ 
+    .bookbox {width: 202.2%; height: 350px; @include flex; text-align: center; 
 
-  .bookbox {width: 100%; height: 350px; background-color: beige; }
+      .page ul {width: 100%; height: 100%; @include flex;}
+
+      .book {width: 9%; height: 100%; @include flex; flex-wrap: wrap; justify-content: center;
+      
+        .bookCover {width: 100%; height: 275px; background-color: gray; border-radius: 8px; box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4); margin-bottom: 15px; position: relative;
+        
+          .light {
+            background: rgba(255, 255, 255, 0.4); position: absolute; left: 4px; top: 3px; border-radius: 2px; height: 97.5%; width: 2px;
+          }
+        }
+      }
+      
+    }
+    
+  }
+  .btn {@include btn;}
 }
 
 .event {
-  height: 140px;
-  background-color: bisque;
+  height: auto; @include btn_show;
 
-  .bookbox {width: 100%; height: 100px; background-color: beige;}
+  .eventwrap {width: 100%; height: 100px; @include flex;
+    .eventB {width: 33%; height: 100%; background-color: lightblue; border-radius: 8px;  background-size: contain; background-repeat: no-repeat; background-position: right; @include flex; padding: 20px; position: relative;
+    
+      &:nth-of-type(1) {
+        background-image: url("../img/main/event1.png"); background-color: $green;
+      }
+      &:nth-of-type(2) {
+        background-image: url("../img/main/event2.png"); background-color: $purple;
+      }
+      &:nth-of-type(3) {
+        background-image: url("../img/main/event3.png"); background-color: $brown;
+      }
+      .text {width: 100%; color: $white; font-weight: $fontW_B;
+        span {font-size: 2rem;}
+      }
+
+      &::after {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #eee; opacity: 0.1;}
+    }
+
+
+    }
+  
 }
 
 .hit {
   height: 280px;
-  background-color: lightcoral;
   @include flex;
-  .boxL {width: 25%; background-color: aqua;}
+  .boxL {width: 25%;
+  
+    h6 {font-weight: normal;}
+    span {font-size: $fontS_B; font-weight: $fontW_B;}
+
+    .btn {
+      margin-top: 20px;
+      
+      .prev {
+        @include btnPrev; width: 30px; height: 30px; margin-right: 5px;
+        i {font-size: $fontS_B;}
+      }
+      .next {
+        @include btnNext; width: 30px; height: 30px; 
+        i {font-size: $fontS_B;}
+      }
+      }
+  }
 .boxR {
-  width: 75%; background-color: pink;
-  .bookbox {height: 280px; background-color: beige;
+  width: 75%;
+  .bookbox {height: 280px;
     @include flex;
 
-    li {width: 280px; height: 100%; background-color: gray; border-radius: 50%;}
+    li {width: 280px; height: 100%; background-color: gray; border-radius: 50%; border: 15px solid $lightgray}
   }
 
 }

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="https://kit.fontawesome.com/02b18b2c57.js" crossorigin="anonymous"></script>
 
+
 </head>
 
 <body>
@@ -100,11 +101,17 @@
           <li><a href="#">BL</a></li>
         </ul>
         <!-- 슬라이더 -->
-        <ul class="slide">
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
+        <div class="slideWrap">
+          <ul class="slide">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+          <div class="btn">
+            <button class="prev"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
         <!-- 서브 네비 -->
         <ul class="subNav">
           <li><a href="#">
@@ -139,65 +146,347 @@
           <div class="bookCover">
             <span class="light"></span>
           </div>
-          <h3 class="bookName">Book Name</h3>
+          <h3 class="bookName"></h3>
         </li>
         <li class="book">
           <div class="bookCover">
             <span class="light"></span>
           </div>
-          <h3 class="bookName">Book Name</h3>
+          <h3 class="bookName"></h3>
         </li>
         <li class="book">
           <div class="bookCover">
             <span class="light"></span>
           </div>
-          <h3 class="bookName">Book Name</h3>
+          <h3 class="bookName"></h3>
         </li>
         <li class="book">
           <div class="bookCover">
             <span class="light"></span>
           </div>
-          <h3 class="bookName">Book Name</h3>
+          <h3 class="bookName"></h3>
         </li>
         <li class="book">
           <div class="bookCover">
             <span class="light"></span>
           </div>
-          <h3 class="bookName">Book Name</h3>
+          <h3 class="bookName"></h3>
         </li>
       </ul>
     </section>
     <!-- MD's Pick -->
     <section class="mdPick container">
       <h2 class="title">MD's Pick</h2>
-      <div class="bookbox"></div>
+      <ul class="bookbox">
+        <li class="book">
+          <div class="bookImg">
+            <div class="bg"></div>
+            <div class="bookCover"></div>
+          </div>
+          <div class="bookNamebox">
+            <h3>Book Name</h3>
+            <p>Text</p>
+          </div>
+        </li>
+        <li class="book">
+          <div class="bookImg">
+            <div class="bg"></div>
+            <div class="bookCover"></div>
+          </div>
+          <div class="bookNamebox">
+            <h3>Book Name</h3>
+            <p>Text</p>
+          </div>
+        </li>
+        <li class="book">
+          <div class="bookImg">
+            <div class="bg"></div>
+            <div class="bookCover"></div>
+          </div>
+          <div class="bookNamebox">
+            <h3>Book Name</h3>
+            <p>Text</p>
+          </div>
+        </li>
+      </ul>
     </section>
     <!-- 베스트 -->
     <section class="best container">
-      <h2 class="title">베스트</h2>
-      <div class="bookbox"></div>
+      <div class="title">
+        <h2>베스트</h2>
+        <button>더보기 +</button>
+      </div>
+
+      <div class="bookbox">
+        <ul class="bookcontainer">
+          <li class="bestlist">
+            <ol>
+              <li class="book">
+                <div class="bookCover"></div>
+                <p class="num">1</p>
+                <div class="bookNamebox">
+                  <h3>book Name</h3>
+                  <p>text</p>
+                  <p>score</p>
+                </div>
+              </li>
+              <li class="book">
+                <div class="bookCover"></div>
+                <p class="num">2</p>
+                <div class="bookNamebox">
+                  <h3>book Name</h3>
+                  <p>text</p>
+                  <p>score</p>
+                </div>
+              </li>
+              <li class="book">
+                <div class="bookCover"></div>
+                <p class="num">3</p>
+                <div class="bookNamebox">
+                  <h3>book Name</h3>
+                  <p>text</p>
+                  <p>score</p>
+                </div>
+              </li>
+            </ol>
+          </li>
+          <li class="bestlist">
+            <ol>
+              <li class="book"></li>
+              <li class="book"></li>
+              <li class="book"></li>
+            </ol>
+          </li>
+          <li class="bestlist">
+            <ol>
+              <li class="book"></li>
+              <li class="book"></li>
+              <li class="book"></li>
+            </ol>
+          </li>
+          <li class="bestlist">
+            <ol>
+              <li class="book"></li>
+              <li class="book"></li>
+              <li class="book"></li>
+            </ol>
+          </li>
+          <li class="bestlist">
+            <ol>
+              <li class="book"></li>
+              <li class="book"></li>
+              <li class="book"></li>
+            </ol>
+          </li>
+          <li class="bestlist">
+            <ol>
+              <li class="book"></li>
+              <li class="book"></li>
+              <li class="book"></li>
+            </ol>
+          </li>
+        </ul>
+        <div class="btn">
+          <button class="prev"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
     </section>
     <!-- 새로 나온 책 -->
     <section class="new">
       <div class="container">
-        <h2 class="title">새로 나온 책</h2>
-        <div class="bookbox"></div>
+        <div class="title">
+          <h2>새로 나온 책</h2>
+          <button>더보기 +</button>
+        </div>
+        <div class="bookcontainer">
+          <div class="boxL">
+            <div class="bookCover"></div>
+            <div class="bookintro">
+              <h3>Book Name</h3>
+              <p>text</p>
+            </div>
+          </div>
+          <div class="boxR">
+            <ol class="bookWrap">
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <h3>Book Name</h3>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <h3>Book Name</h3>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <h3>Book Name</h3>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <h3>Book Name</h3>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <h3>Book Name</h3>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <h3>Book Name</h3>
+              </li>
+            </ol>
+          </div>
+          <div class="btn">
+            <button class="prev"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
       </div>
     </section>
     <!-- 영화 원작 소설 -->
     <section class="academy container">
-      <h2 class="title">아카데미 수상작 & 후보작 원작</h2>
-      <div class="bookbox"></div>
+      <div class="title">
+        <h2>아카데미 수상작 & 후보작 원작</h2>
+        <button>더보기 +</button>
+      </div>
+      <div class="academybook">
+        <ol class="bookbox">
+          <li class="book">
+            <div class="bookCover">
+              <span class="light"></span>
+            </div>
+            <div class="bookNamebox">
+              <h3 class="bookName">Book Name</h3>
+              <p>text</p>
+            </div>
+          </li>
+          <li class="book">
+            <div class="bookCover">
+              <span class="light"></span>
+            </div>
+            <div class="bookNamebox">
+              <h3 class="bookName">Book Name</h3>
+              <p>text</p>
+            </div>
+          </li>
+          <li class="book">
+            <div class="bookCover">
+              <span class="light"></span>
+            </div>
+            <div class="bookNamebox">
+              <h3 class="bookName">Book Name</h3>
+              <p>text</p>
+            </div>
+          </li>
+          <li class="book">
+            <div class="bookCover">
+              <span class="light"></span>
+            </div>
+            <div class="bookNamebox">
+              <h3 class="bookName">Book Name</h3>
+              <p>text</p>
+            </div>
+          </li>
+          <li class="book">
+            <div class="bookCover">
+              <span class="light"></span>
+            </div>
+            <div class="bookNamebox">
+              <h3 class="bookName">Book Name</h3>
+              <p>text</p>
+            </div>
+          </li>
+
+
+          <li class="book">
+            <div class="bookCover">
+              <span class="light"></span>
+            </div>
+            <div class="bookNamebox">
+              <h3 class="bookName">Book Name</h3>
+              <p>text</p>
+            </div>
+          </li>
+          <li class="book">
+            <div class="bookCover">
+              <span class="light"></span>
+            </div>
+            <div class="bookNamebox">
+              <h3 class="bookName">Book Name</h3>
+              <p>text</p>
+            </div>
+          </li>
+          <li class="book">
+            <div class="bookCover">
+              <span class="light"></span>
+            </div>
+            <div class="bookNamebox">
+              <h3 class="bookName">Book Name</h3>
+              <p>text</p>
+            </div>
+          </li>
+          <li class="book">
+            <div class="bookCover">
+              <span class="light"></span>
+            </div>
+            <div class="bookNamebox">
+              <h3 class="bookName">Book Name</h3>
+              <p>text</p>
+            </div>
+          </li>
+          <li class="book">
+            <div class="bookCover">
+              <span class="light"></span>
+            </div>
+            <div class="bookNamebox">
+              <h3 class="bookName">Book Name</h3>
+              <p>text</p>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+      <div class="btn">
+        <button class="prev"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
     </section>
     <!-- 이벤트 -->
     <section class="event container">
-      <h2 class="title">이벤트</h2>
-      <div class="bookbox"></div>
+      <div class="title">
+        <h2>이벤트</h2>
+        <button>더보기 +</button>
+      </div>
+      <ul class="eventwrap">
+        <li class="eventB"><a href="#">
+            <p class="text">화수목 선착순 50% 할인! <br> 감상한 전원 포인트</p>
+          </a></li>
+        <li class="eventB">
+          <a href="#">
+            <p class="text">띵동, 웹툰 입고 완료! <br> 1화 감상 시 랜덤 포인트!</p>
+          </a>
+        </li>
+        <li class="eventB">
+          <a href="#">
+            <p class="text">
+              웹툰으로 만나는 <br>
+              장재현 감독의 <사바하><br>
+                <span>ⓒ스르륵코믹스</span></p>
+          </a>
+        </li>
+      </ul>
     </section>
     <!-- 히트 -->
     <section class="hit container">
       <div class="boxL">
         <h2 class="title">히트</h2>
+        <h6>리디북스에서만 만나볼 수 있는 특별한 <br> 상품들을 소개합니다.</h6>
+        <br><br><br><br><br>
+        <a href="#"><span>더보기 +</span></a>
+
+        <div class="btn">
+          <button class="prev"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
       </div>
       <div class="boxR">
         <ul class="bookbox">
@@ -213,13 +502,11 @@
     <footer>
 
     </footer>
-
-
-
-
-    <!-- <button class="prev"><i class="fa-solid fa-chevron-right"></i></button>
-      <button class="next"><i class="fa-solid fa-chevron-right"></i></button> -->
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 
 </html>
