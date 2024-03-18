@@ -42,19 +42,22 @@ h2 {
 }
 
 h3 {
-  font-size: 5rem;
-}
-
-h6 {
-  font-size: 3.5rem;
-}
-
-p, a {
   font-size: 4rem;
 }
 
+h4 {
+  font-size: 4.5rem;
+}
+
+h6 {
+  font-size: 3rem;
+}
+
+p, a {
+  font-size: 3.5rem;
+}
+
 #wrap {
-  height: 4200px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -76,6 +79,7 @@ img {
 
 .main {
   height: 600px;
+  margin-bottom: 100px;
 }
 .main .container {
   display: flex;
@@ -89,10 +93,18 @@ img {
   justify-content: space-between;
   align-items: center;
   align-content: space-between;
-  width: 15%;
+  width: 12%;
+}
+.main .container .category .active {
+  background-color: #1E9EFF;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.main .container .category .active a {
+  color: white;
 }
 .main .container .category a {
-  font-size: 6rem;
+  font-size: 4rem;
 }
 .main .container .category li:first-child a {
   font-weight: 700;
@@ -139,7 +151,6 @@ img {
   background-color: rgba(30, 158, 255, 0.5);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 .main .container .slideWrap .btn .prev:hover i {
   color: #666;
@@ -185,7 +196,6 @@ img {
   background-color: rgba(30, 158, 255, 0.5);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 .main .container .slideWrap .btn .next:hover i {
   color: #666;
@@ -198,11 +208,11 @@ img {
   color: #fff;
 }
 .main .container .subNav {
-  width: 60%;
+  width: 100%;
   height: 100px;
-  margin: 0 auto;
+  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .main .container .subNav li {
   width: 90px;
@@ -210,8 +220,33 @@ img {
 .main .container .subNav li .box {
   width: 70px;
   height: 70px;
-  background-color: gray;
+  background-color: #eee;
   border-radius: 50%;
+  position: relative;
+}
+.main .container .subNav li .box i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+}
+.main .container .subNav li .box p, .main .container .subNav li .box .adult {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+.main .container .subNav li .box .adult {
+  border: 2px solid red;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  line-height: 24px;
+  text-align: center;
+  background-color: white;
 }
 .main .container .subNav li a {
   display: flex;
@@ -227,6 +262,7 @@ img {
 
 .recommend {
   height: auto;
+  margin-bottom: 100px;
 }
 .recommend .bookbox {
   width: 100%;
@@ -236,6 +272,7 @@ img {
   align-content: space-between;
   text-align: center;
   height: 80%;
+  align-items: flex-start;
 }
 .recommend .bookbox .book {
   width: 17%;
@@ -256,6 +293,9 @@ img {
   margin-bottom: 15px;
   position: relative;
 }
+.recommend .bookbox .book .bookCover img {
+  border-radius: 8px;
+}
 .recommend .bookbox .book .bookCover .light {
   background: rgba(255, 255, 255, 0.4);
   position: absolute;
@@ -271,6 +311,7 @@ img {
 
 .mdPick {
   height: auto;
+  margin-bottom: 100px;
 }
 .mdPick .bookbox {
   width: 100%;
@@ -284,14 +325,22 @@ img {
   width: 32%;
   height: 100%;
 }
+.mdPick .bookbox .book:nth-of-type(1) .bg {
+  background-color: #423027;
+}
+.mdPick .bookbox .book:nth-of-type(2) .bg {
+  background-color: #02331D;
+}
+.mdPick .bookbox .book:nth-of-type(3) .bg {
+  background-color: #27493A;
+}
 .mdPick .bookbox .book .bookImg {
   height: 70%;
   position: relative;
 }
 .mdPick .bookbox .book .bookImg .bg {
-  height: 70%;
+  height: 60%;
   width: 100%;
-  background-color: gold;
   position: absolute;
   bottom: 0;
   border-radius: 10px;
@@ -311,6 +360,7 @@ img {
 
 .best {
   height: 440px;
+  margin-bottom: 100px;
 }
 .best .title {
   display: flex;
@@ -320,7 +370,7 @@ img {
   width: 100%;
 }
 .best button {
-  font-size: 5rem;
+  font-size: 4rem;
   background: none;
   border: none;
   text-align: right;
@@ -360,7 +410,7 @@ img {
 .best .bookbox .bookcontainer .bestlist ol .book {
   width: 100%;
   height: 32%;
-  background-color: lightcoral;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -373,7 +423,7 @@ img {
   border-radius: 8px;
 }
 .best .bookbox .bookcontainer .bestlist ol .book .bookNamebox {
-  width: 55%;
+  width: 60%;
 }
 .best .bookbox .btn .prev {
   width: 50px;
@@ -411,7 +461,6 @@ img {
   background-color: rgba(30, 158, 255, 0.5);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 .best .bookbox .btn .prev:hover i {
   color: #666;
@@ -457,7 +506,6 @@ img {
   background-color: rgba(30, 158, 255, 0.5);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 .best .bookbox .btn .next:hover i {
   color: #666;
@@ -473,6 +521,7 @@ img {
 .new {
   width: 100%;
   background-color: #D2ECFF;
+  margin-bottom: 100px;
 }
 .new .title {
   display: flex;
@@ -482,7 +531,7 @@ img {
   width: 100%;
 }
 .new button {
-  font-size: 5rem;
+  font-size: 4rem;
   background: none;
   border: none;
   text-align: right;
@@ -505,7 +554,7 @@ img {
 }
 .new .container .bookcontainer {
   width: 100%;
-  height: 350px;
+  height: 400px;
   margin: 15px 0 30px 0;
   display: flex;
   justify-content: space-between;
@@ -515,6 +564,14 @@ img {
 }
 .new .container .bookcontainer .boxL {
   width: 50%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+.new .container .bookcontainer .boxL .bookbox {
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -529,7 +586,16 @@ img {
 }
 .new .container .bookcontainer .boxL .bookintro {
   width: 50%;
-  height: 50%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.new .container .bookcontainer .boxL .bookintro .bookAuthor {
+  width: 100%;
+  font-weight: 700;
 }
 .new .container .bookcontainer .boxR {
   width: 40%;
@@ -553,6 +619,10 @@ img {
   height: 85%;
   background-color: gray;
   border-radius: 8px;
+}
+.new .container .bookcontainer .boxR .bookWrap .bookbox .bookName {
+  font-weight: 500;
+  margin-top: 10px;
 }
 .new .container .bookcontainer .btn {
   position: absolute;
@@ -595,7 +665,6 @@ img {
   background-color: rgba(30, 158, 255, 0.5);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 .new .container .bookcontainer .btn .prev:hover i {
   color: #666;
@@ -641,7 +710,6 @@ img {
   background-color: rgba(30, 158, 255, 0.5);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 .new .container .bookcontainer .btn .next:hover i {
   color: #666;
@@ -655,6 +723,7 @@ img {
 }
 
 .academy {
+  margin-bottom: 100px;
   height: auto;
   position: relative;
 }
@@ -666,7 +735,7 @@ img {
   width: 100%;
 }
 .academy button {
-  font-size: 5rem;
+  font-size: 4rem;
   background: none;
   border: none;
   text-align: right;
@@ -682,12 +751,12 @@ img {
 }
 .academy .academybook .bookbox {
   width: 202.2%;
-  height: 350px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: space-between;
   text-align: center;
+  align-items: flex-start;
 }
 .academy .academybook .bookbox .page ul {
   width: 100%;
@@ -716,6 +785,9 @@ img {
   margin-bottom: 15px;
   position: relative;
 }
+.academy .academybook .bookbox .book .bookCover img {
+  border-radius: 8px;
+}
 .academy .academybook .bookbox .book .bookCover .light {
   background: rgba(255, 255, 255, 0.4);
   position: absolute;
@@ -724,6 +796,9 @@ img {
   border-radius: 2px;
   height: 97.5%;
   width: 2px;
+}
+.academy .academybook .bookbox .book .bookName p {
+  font-weight: 500;
 }
 .academy .btn .prev {
   width: 50px;
@@ -761,7 +836,6 @@ img {
   background-color: rgba(30, 158, 255, 0.5);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 .academy .btn .prev:hover i {
   color: #666;
@@ -807,7 +881,6 @@ img {
   background-color: rgba(30, 158, 255, 0.5);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 .academy .btn .next:hover i {
   color: #666;
@@ -822,6 +895,7 @@ img {
 
 .event {
   height: auto;
+  margin-bottom: 100px;
 }
 .event .title {
   display: flex;
@@ -831,7 +905,7 @@ img {
   width: 100%;
 }
 .event button {
-  font-size: 5rem;
+  font-size: 4rem;
   background: none;
   border: none;
   text-align: right;
@@ -898,10 +972,12 @@ img {
 
 .hit {
   height: 280px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: space-between;
+  margin-bottom: 100px;
 }
 .hit .boxL {
   width: 25%;
@@ -910,11 +986,14 @@ img {
   font-weight: normal;
 }
 .hit .boxL span {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
 }
 .hit .boxL .btn {
-  margin-top: 20px;
+  margin-top: 30px;
+  width: 27%;
+  display: flex;
+  position: relative;
 }
 .hit .boxL .btn .prev {
   width: 50px;
@@ -931,6 +1010,8 @@ img {
   width: 30px;
   height: 30px;
   margin-right: 5px;
+  position: absolute;
+  left: 0;
 }
 .hit .boxL .btn .prev i {
   color: #1E9EFF;
@@ -951,7 +1032,6 @@ img {
   background-color: rgba(30, 158, 255, 0.5);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 .hit .boxL .btn .prev:hover i {
   color: #666;
@@ -964,7 +1044,7 @@ img {
   color: #fff;
 }
 .hit .boxL .btn .prev i {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 .hit .boxL .btn .next {
   width: 50px;
@@ -978,6 +1058,7 @@ img {
   cursor: pointer;
   width: 30px;
   height: 30px;
+  position: absolute;
 }
 .hit .boxL .btn .next i {
   color: #1E9EFF;
@@ -998,7 +1079,6 @@ img {
   background-color: rgba(30, 158, 255, 0.5);
   color: white;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
 }
 .hit .boxL .btn .next:hover i {
   color: #666;
@@ -1011,7 +1091,26 @@ img {
   color: #fff;
 }
 .hit .boxL .btn .next i {
-  font-size: 4rem;
+  font-size: 3.5rem;
+}
+.hit .swiper {
+  width: 100%;
+  height: 100%;
+}
+.hit .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hit .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hit .boxR {
   width: 75%;
@@ -1022,11 +1121,60 @@ img {
   justify-content: space-between;
   align-items: center;
   align-content: space-between;
+  width: 200%;
 }
 .hit .boxR .bookbox li {
   width: 280px;
   height: 100%;
   background-color: gray;
   border-radius: 50%;
-  border: 15px solid #eee;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.hit .boxR .bookbox li .textbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+  color: white;
+  opacity: 0;
+  width: 100%;
+}
+.hit .boxR .bookbox li .textbox span {
+  color: #1E9EFF;
+}
+.hit .boxR .bookbox li:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.8);
+  border-radius: 50%;
+}
+.hit .boxR .bookbox li:hover .textbox {
+  opacity: 1;
+}
+.hit .boxR .bookbox li:nth-of-type(1) {
+  background-image: url(../img/main/hit1.jpg);
+}
+.hit .boxR .bookbox li:nth-of-type(2) {
+  background-image: url(../img/main/hit2.jpg);
+}
+.hit .boxR .bookbox li:nth-of-type(3) {
+  background-image: url(../img/main/hit3.jpg);
+}
+.hit .boxR .bookbox li:nth-of-type(4) {
+  background-image: url(../img/main/hit4.jpg);
+}
+.hit .boxR .bookbox li:nth-of-type(5) {
+  background-image: url(../img/main/hit5.jpg);
+}
+.hit .boxR .bookbox li:nth-of-type(6) {
+  background-image: url(../img/main/hit6.jpg);
 }

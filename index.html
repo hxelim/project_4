@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="https://kit.fontawesome.com/02b18b2c57.js" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -96,7 +98,7 @@
     <section class="main">
       <div class="container">
         <ul class="category">
-          <li><a href="#">추천</a></li>
+          <li class="active"><a href="#">추천</a></li>
           <li><a href="#">로맨스</a></li>
           <li><a href="#">BL</a></li>
         </ul>
@@ -115,25 +117,29 @@
         <!-- 서브 네비 -->
         <ul class="subNav">
           <li><a href="#">
-              <div class="box"></div> 신작
+              <div class="box"><p>N</p></div> 신작
             </a></li>
           <li><a href="#">
-              <div class="box"></div> 이벤트
+              <div class="box"><i class="fa-solid fa-heart"></i></div> 이벤트
             </a></li>
           <li><a href="#">
-              <div class="box"></div> 리디ONLY
+              <div class="box"><p>ONLY</p></div> 리디ONLY
             </a></li>
           <li><a href="#">
-              <div class="box"></div> 리다무
+              <div class="box"><i class="fa-regular fa-clock"></i></div> 리다무
             </a></li>
           <li><a href="#">
-              <div class="box"></div> 이달의 신작
+              <div class="box"><i class="fa-regular fa-calendar"></i></div> 이달의 신작
             </a></li>
           <li><a href="#">
-              <div class="box"></div> 위클리 쿠폰
+              <div class="box"><i class="fa-solid fa-ticket"></i></div> 위클리 쿠폰
             </a></li>
           <li><a href="#">
-              <div class="box"></div> 19+
+              <div class="box">
+                <div class="adult">
+                19
+              </div>
+            </div> 19+
             </a></li>
         </ul>
       </div>
@@ -184,8 +190,8 @@
             <div class="bookCover"></div>
           </div>
           <div class="bookNamebox">
-            <h3>Book Name</h3>
-            <p>Text</p>
+            <h3></h3>
+            <p></p>
           </div>
         </li>
         <li class="book">
@@ -194,8 +200,8 @@
             <div class="bookCover"></div>
           </div>
           <div class="bookNamebox">
-            <h3>Book Name</h3>
-            <p>Text</p>
+            <h3></h3>
+            <p></p>
           </div>
         </li>
         <li class="book">
@@ -204,8 +210,8 @@
             <div class="bookCover"></div>
           </div>
           <div class="bookNamebox">
-            <h3>Book Name</h3>
-            <p>Text</p>
+            <h3></h3>
+            <p></p>
           </div>
         </li>
       </ul>
@@ -221,32 +227,9 @@
         <ul class="bookcontainer">
           <li class="bestlist">
             <ol>
+              <li class="book"></li>
+              <li class="book"></li>
               <li class="book">
-                <div class="bookCover"></div>
-                <p class="num">1</p>
-                <div class="bookNamebox">
-                  <h3>book Name</h3>
-                  <p>text</p>
-                  <p>score</p>
-                </div>
-              </li>
-              <li class="book">
-                <div class="bookCover"></div>
-                <p class="num">2</p>
-                <div class="bookNamebox">
-                  <h3>book Name</h3>
-                  <p>text</p>
-                  <p>score</p>
-                </div>
-              </li>
-              <li class="book">
-                <div class="bookCover"></div>
-                <p class="num">3</p>
-                <div class="bookNamebox">
-                  <h3>book Name</h3>
-                  <p>text</p>
-                  <p>score</p>
-                </div>
               </li>
             </ol>
           </li>
@@ -301,37 +284,40 @@
         </div>
         <div class="bookcontainer">
           <div class="boxL">
-            <div class="bookCover"></div>
-            <div class="bookintro">
-              <h3>Book Name</h3>
-              <p>text</p>
+            <div class="bookbox">
+              <div class="bookCover"></div>
+              <div class="bookintro">
+                <h3 class="bookName"></h3>
+                <p class="bookAuthor"></p>
+                <p class="bookContents"></p>
+              </div>
             </div>
           </div>
           <div class="boxR">
             <ol class="bookWrap">
               <li class="bookbox">
                 <div class="bookCover"></div>
-                <h3>Book Name</h3>
+                <h3 class="bookName"></h3>
               </li>
               <li class="bookbox">
                 <div class="bookCover"></div>
-                <h3>Book Name</h3>
+                <h3 class="bookName"></h3>
               </li>
               <li class="bookbox">
                 <div class="bookCover"></div>
-                <h3>Book Name</h3>
+                <h3 class="bookName"></h3>
               </li>
               <li class="bookbox">
                 <div class="bookCover"></div>
-                <h3>Book Name</h3>
+                <h3 class="bookName"></h3>
               </li>
               <li class="bookbox">
                 <div class="bookCover"></div>
-                <h3>Book Name</h3>
+                <h3 class="bookName"></h3>
               </li>
               <li class="bookbox">
                 <div class="bookCover"></div>
-                <h3>Book Name</h3>
+                <h3 class="bookName"></h3>
               </li>
             </ol>
           </div>
@@ -355,8 +341,7 @@
               <span class="light"></span>
             </div>
             <div class="bookNamebox">
-              <h3 class="bookName">Book Name</h3>
-              <p>text</p>
+              <h3 class="bookName"></h3>
             </div>
           </li>
           <li class="book">
@@ -364,8 +349,7 @@
               <span class="light"></span>
             </div>
             <div class="bookNamebox">
-              <h3 class="bookName">Book Name</h3>
-              <p>text</p>
+              <h3 class="bookName"></h3>
             </div>
           </li>
           <li class="book">
@@ -373,8 +357,7 @@
               <span class="light"></span>
             </div>
             <div class="bookNamebox">
-              <h3 class="bookName">Book Name</h3>
-              <p>text</p>
+              <h3 class="bookName"></h3>
             </div>
           </li>
           <li class="book">
@@ -382,8 +365,7 @@
               <span class="light"></span>
             </div>
             <div class="bookNamebox">
-              <h3 class="bookName">Book Name</h3>
-              <p>text</p>
+              <h3 class="bookName"></h3>
             </div>
           </li>
           <li class="book">
@@ -391,8 +373,7 @@
               <span class="light"></span>
             </div>
             <div class="bookNamebox">
-              <h3 class="bookName">Book Name</h3>
-              <p>text</p>
+              <h3 class="bookName"></h3>
             </div>
           </li>
 
@@ -402,8 +383,7 @@
               <span class="light"></span>
             </div>
             <div class="bookNamebox">
-              <h3 class="bookName">Book Name</h3>
-              <p>text</p>
+              <h3 class="bookName"></h3>
             </div>
           </li>
           <li class="book">
@@ -411,8 +391,7 @@
               <span class="light"></span>
             </div>
             <div class="bookNamebox">
-              <h3 class="bookName">Book Name</h3>
-              <p>text</p>
+              <h3 class="bookName"></h3>
             </div>
           </li>
           <li class="book">
@@ -420,8 +399,7 @@
               <span class="light"></span>
             </div>
             <div class="bookNamebox">
-              <h3 class="bookName">Book Name</h3>
-              <p>text</p>
+              <h3 class="bookName"></h3>
             </div>
           </li>
           <li class="book">
@@ -429,8 +407,7 @@
               <span class="light"></span>
             </div>
             <div class="bookNamebox">
-              <h3 class="bookName">Book Name</h3>
-              <p>text</p>
+              <h3 class="bookName"></h3>
             </div>
           </li>
           <li class="book">
@@ -438,8 +415,7 @@
               <span class="light"></span>
             </div>
             <div class="bookNamebox">
-              <h3 class="bookName">Book Name</h3>
-              <p>text</p>
+              <h3 class="bookName"></h3>
             </div>
           </li>
 
@@ -475,8 +451,9 @@
         </li>
       </ul>
     </section>
+
     <!-- 히트 -->
-    <section class="hit container">
+    <section class="hit container ">
       <div class="boxL">
         <h2 class="title">히트</h2>
         <h6>리디북스에서만 만나볼 수 있는 특별한 <br> 상품들을 소개합니다.</h6>
@@ -484,15 +461,56 @@
         <a href="#"><span>더보기 +</span></a>
 
         <div class="btn">
-          <button class="prev"><i class="fa-solid fa-chevron-right"></i></button>
-          <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="next swiper-button-next"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="prev swiper-button-prev"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
-      <div class="boxR">
-        <ul class="bookbox">
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
+      <div class="boxR swiper mySwiper">
+        <ul class="bookbox swiper-wrapper">
+          <li class="swiper-slide"><a href="#">
+            <div class="textbox">
+              <p>보라쇼 - 곽정은</p>
+              <br><br>
+              <p><span>10%</span> 27,000원</p>
+            </div>
+          </a></li>
+          <li class="swiper-slide"><a href="#">
+            <div class="textbox">
+              <p>보라쇼 - 김경일</p>
+              <br><br>
+              <p><span>10%</span> 27,000원</p>
+            </div>
+          </a></li>
+          <li class="swiper-slide"><a href="#">
+            <div class="textbox">
+              <p>친절한 입문서 - 서양미술...</p>
+              <br><br>
+              <p>15,000원</p>
+            </div>
+          </a></li>
+          <li class="swiper-slide"><a href="#">
+            <div class="textbox">
+              <p>썬킴의 한국사 강연 : 1919...</p>
+              <br><br>
+              <p><span>20%</span> 20,000원</p>
+            </div>
+          </a></li>
+          <li class="swiper-slide"><a href="#">
+            <div class="textbox">
+              <p>2024 명강의Big10 - 정희원</p>
+              <br><br>
+              <p>17,000원</p>
+            </div>
+          </a></li>
+          <li class="swiper-slide"><a href="#">
+            <div class="textbox">
+              <p>
+                [3월30일] 앤서니브라운의...
+              </p>
+              <br><br>
+              <p><span>55%</span> 18,000원</p>
+            </div>
+          </a></li>
         </ul>
 
       </div>
@@ -500,13 +518,76 @@
 
     <!-- 푸터 -->
     <footer>
-
+      <div class="container">
+        <div class="boxTop">
+          <div class="shortcut">
+            <div class="lnav">
+              <p><a href="#"><i class="fa-solid fa-headset"></i> 고객센터</a></p>
+              <p><a href="#"><i class="fa-solid fa-volume-low"></i> 공지사항</a></p>
+            </div>
+            <ol class="fnav">
+                <li><a href="#">서비스</a>
+                  <ul>
+                    <li><a href="#">제휴카드</a></li>
+                    <li><a href="#">뷰어 다운로드</a></li>
+                    <li><a href="#">CP사이트</a></li>
+                    <li><a href="#">리디바탕</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">기타 문의</a>
+                  <ul>
+                    <li><a href="#">콘텐츠 제공 문의</a></li>
+                    <li><a href="#">사업 제휴 문의</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul></li>
+                <li><a href="#">회사</a>
+                  <ul>
+                    <li><a href="#">회사 소개</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul></li>
+            </ol>
+          </div>
+          <div class="iconWrap">
+            <a href="#">
+              <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+            </a>
+            <a href="#">
+              <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+            </a>
+            <a href="#">
+              <div class="icon"><i class="fa-brands fa-x-twitter"></i></div>
+            </a>
+            <a href="#">
+              <div class="icon"><i class="fa-solid fa-play"></i></div>
+            </a>
+            <a href="#">
+              <div class="icon"><i class="fa-brands fa-tiktok"></i></div>
+            </a>
+          </div>
+        </div>
+        <div class="boxBottom">
+          <p>리디(주) 사업자 정보 <i class="fa-solid fa-chevron-down"></i></p>
+          <ul class="fbottom">
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">청소년보호정책</a></li>
+            <li><a href="#">사업자정보확인</a></li>
+          </ul>
+          <br>
+          <p>© RIDI Corp.</p>
+        </div>
+      </div>
     </footer>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
-
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
 </body>
 
 </html>

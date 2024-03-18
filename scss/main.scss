@@ -4,22 +4,30 @@
 
 
 
-#wrap {height: 4200px; width: 100%; display: flex; flex-direction: column; justify-content: space-between;}
+#wrap {width: 100%; display: flex; flex-direction: column; justify-content: space-between;}
 
 .container {width: 1170px; height: 100%; margin: 0 auto;}
 
 img {width: 100%; height: 100%; object-fit: cover;}
 
+// section {margin-bottom: 50px;}
 
 .main {
-  height: 600px; 
+  height: 600px;  @include margin;
   .container {
     @include flex; flex-wrap: wrap;
     .category {
-      @include flex; width: 15%;
+      @include flex; width: 12%;
       
+      .active {background-color: $blue; padding:  5px 10px; border-radius: 20px; 
+      
+        a {color: white;}
+      }
+ 
+
+
       a {
-        font-size: $fontS_L;
+        font-size: $fontS_M;
       }
 
       li:first-child a {font-weight: $fontW_B;}
@@ -35,10 +43,17 @@ img {width: 100%; height: 100%; object-fit: cover;}
       }
     }
     .subNav {
-      width: 60%; height: 100px;  margin: 0 auto; display: flex; justify-content: space-between;
+      width: 100%; height: 100px;  margin-top: 20px; display: flex; justify-content: center;
       li {
         width: 90px;
-        .box {width: 70px; height: 70px; background-color: gray; border-radius: 50%;}
+        .box {width: 70px; height: 70px; background-color: $lightgray; border-radius: 50%; position: relative;
+        
+          i {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 5rem;}
+
+          p,.adult {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 3.8rem; font-weight: bold;}
+        
+          .adult {border: 2px solid red; border-radius: 50px; width: 30px; height: 30px; line-height: 24px; text-align: center; background-color: white;}
+        }
         a {display: flex; flex-wrap: wrap; justify-content: center; align-content: space-between; height: 100%; }
       }
     }
@@ -48,16 +63,18 @@ img {width: 100%; height: 100%; object-fit: cover;}
 .title {margin-bottom: 15px;}
 
 .recommend {
-  height: auto;
+  height: auto; @include margin;
   // @include flex; flex-wrap: wrap; 
   
 
-  .bookbox {width: 100%; @include flex; text-align: center; height: 80%;
+  .bookbox {width: 100%; @include flex; text-align: center; height: 80%; align-items: flex-start;
     
     .book {width: 17%; height: 100%; @include flex; flex-wrap: wrap; justify-content: center;
     
     .bookCover {width: 100%; height: 285px; background-color: gray; border-radius: 8px; box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4); margin-bottom: 15px; position: relative;
     
+      img {border-radius: 8px;}
+
       .light {
         background: rgba(255, 255, 255, 0.4); position: absolute; left: 4px; top: 3px; border-radius: 2px; height: 97.5%; width: 2px;
       }
@@ -69,19 +86,30 @@ img {width: 100%; height: 100%; object-fit: cover;}
 }
 
 .mdPick {
-  height: auto;
+  height: auto; @include margin;
   // @include flex; flex-wrap: wrap; 
 
 
   .bookbox {width: 100%; height: 230px;
-    @include flex;
+    @include flex; 
   
     .book {width: 32%; height: 100%;
+
+      &:nth-of-type(1) .bg {background-color: #423027;}
+      &:nth-of-type(2) .bg {background-color: #02331D;}
+      &:nth-of-type(3) .bg {background-color: #27493A;}
+
+
       .bookImg {height: 70%; position: relative;
 
-        .bg {height: 70%; width: 100%; background-color: gold; position: absolute; bottom: 0; border-radius: 10px;}
+        .bg {height: 60%; width: 100%; position: absolute; bottom: 0; border-radius: 10px;}
 
-        .bookCover {width: 110px; height: 100%; background-color: gray; position: absolute; left: 50%; transform: translateX(-50%); border-radius: 8px;}
+
+
+        .bookCover {width: 110px; height: 100%; background-color: gray; position: absolute; left: 50%; transform: translateX(-50%); border-radius: 8px;
+        
+        
+        }
       }
 
       .bookNamebox {
@@ -93,7 +121,7 @@ img {width: 100%; height: 100%; object-fit: cover;}
 }
 
 .best {
-  height: 440px;
+  height: 440px; @include margin;
   @include btn_show;
 
 
@@ -107,11 +135,11 @@ img {width: 100%; height: 100%; object-fit: cover;}
         ol {width: 100%; height: 100%;
           @include flex; flex-wrap: wrap;
 
-          .book {width: 100%; height: 32%; background-color: lightcoral; @include flex;
+          .book {width: 100%; height: 32%; padding: 10px;  @include flex;
 
             .bookCover {width: 25%; height: 100%; background-color: lightblue; border-radius: 8px;}
 
-            .bookNamebox {width: 55%}
+            .bookNamebox {width: 60%}
         }
 
         } 
@@ -127,19 +155,23 @@ img {width: 100%; height: 100%; object-fit: cover;}
 
 .new {
   width: 100%;
-  background-color: $lightblue;
+  background-color: $lightblue; @include margin;
   @include btn_show;
 
   .container {@include flex; flex-wrap: wrap; 
     .title {margin-top: 20px;}
 
-  .bookcontainer {width: 100%; height: 350px; margin: 15px 0 30px 0; @include flex; position: relative; 
+  .bookcontainer {width: 100%; height: 400px; margin: 15px 0 30px 0; @include flex; position: relative; 
   
-    .boxL {width: 50%; height: 100%;  @include flex;
+    .boxL {width: 50%; height: 90%;  @include flex;
     
+      .bookbox {width: 100%; height: 100%; @include flex;}
       .bookCover {width: 230px; background-color: gray; height: 100%; border-radius: 8px;}
 
-      .bookintro {width: 50%; height: 50%;}
+      .bookintro {width: 50%; height: 80%; @include flex; flex-wrap: wrap;
+      
+      .bookAuthor {width: 100%; font-weight: $fontW_B;}
+      }
     }
     .boxR {width: 40%; height: 60%;
       .bookWrap {
@@ -148,6 +180,8 @@ img {width: 100%; height: 100%; object-fit: cover;}
           width: 15%; height: 100%; text-align: center;
 
           .bookCover {width: 100%; height: 85%; background-color: gray; border-radius: 8px;}
+
+          .bookName { font-weight: $fontW_N; margin-top: 10px}
         }
       }
     }
@@ -161,22 +195,27 @@ img {width: 100%; height: 100%; object-fit: cover;}
 }
 
 .academy {
-  @include btn_show;
+  @include btn_show; @include margin;
   height: auto; position: relative; 
   .academybook {width: 100%;
  
-    .bookbox {width: 202.2%; height: 350px; @include flex; text-align: center; 
+    .bookbox {width: 202.2%; @include flex; text-align: center; align-items: flex-start;
 
       .page ul {width: 100%; height: 100%; @include flex;}
 
       .book {width: 9%; height: 100%; @include flex; flex-wrap: wrap; justify-content: center;
       
         .bookCover {width: 100%; height: 275px; background-color: gray; border-radius: 8px; box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.4); margin-bottom: 15px; position: relative;
+
+          img {border-radius: 8px;}
         
           .light {
             background: rgba(255, 255, 255, 0.4); position: absolute; left: 4px; top: 3px; border-radius: 2px; height: 97.5%; width: 2px;
           }
         }
+
+        .bookName p {font-weight: $fontW_N}
+
       }
       
     }
@@ -186,7 +225,7 @@ img {width: 100%; height: 100%; object-fit: cover;}
 }
 
 .event {
-  height: auto; @include btn_show;
+  height: auto; @include btn_show; @include margin;
 
   .eventwrap {width: 100%; height: 100px; @include flex;
     .eventB {width: 33%; height: 100%; background-color: lightblue; border-radius: 8px;  background-size: contain; background-repeat: no-repeat; background-position: right; @include flex; padding: 20px; position: relative;
@@ -213,32 +252,71 @@ img {width: 100%; height: 100%; object-fit: cover;}
 }
 
 .hit {
-  height: 280px;
-  @include flex;
+  height: 280px; margin-top: 20px;
+  @include flex; @include margin;
   .boxL {width: 25%;
   
     h6 {font-weight: normal;}
     span {font-size: $fontS_B; font-weight: $fontW_B;}
 
     .btn {
-      margin-top: 20px;
+      margin-top: 30px; width: 27%; display: flex; position: relative;
       
       .prev {
-        @include btnPrev; width: 30px; height: 30px; margin-right: 5px;
+        @include btnPrev; width: 30px; height: 30px; margin-right: 5px; position: absolute; left: 0;
         i {font-size: $fontS_B;}
       }
       .next {
-        @include btnNext; width: 30px; height: 30px; 
+        @include btnNext; width: 30px; height: 30px; position: absolute;
         i {font-size: $fontS_B;}
       }
       }
   }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 .boxR {
   width: 75%;
   .bookbox {height: 280px;
-    @include flex;
+    @include flex; width: 200%;
 
-    li {width: 280px; height: 100%; background-color: gray; border-radius: 50%; border: 15px solid $lightgray}
+    li {width: 280px; height: 100%; background-color: gray; border-radius: 50%; background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;
+
+      .textbox {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; z-index: 5; color: white; opacity: 0; width: 100%;
+      
+      span {color: $blue;}
+      }
+
+      &:hover::after{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgb(51, 51, 51,0.8); border-radius: 50%;}
+
+      &:hover .textbox {opacity: 1;}
+    
+    &:nth-of-type(1) {background-image: url(../img/main/hit1.jpg);}
+    &:nth-of-type(2) {background-image: url(../img/main/hit2.jpg);}
+    &:nth-of-type(3) {background-image: url(../img/main/hit3.jpg);}
+    &:nth-of-type(4) {background-image: url(../img/main/hit4.jpg);}
+    &:nth-of-type(5) {background-image: url(../img/main/hit5.jpg);}
+    &:nth-of-type(6) {background-image: url(../img/main/hit6.jpg);}
+    }
   }
 
 }

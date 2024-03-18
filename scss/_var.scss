@@ -17,9 +17,9 @@ html {font-size: 4px;}
 
 $fontS_XL : 10rem;  //40px 
 $fontS_L : 6rem;  //24px  
-$fontS_M : 5rem;  //20px  
-$fontS_S : 3.5rem;  //14px
-$fontS_B : 4rem;  //16px 
+$fontS_M : 4rem;  //20px  
+$fontS_S : 3rem;  //14px
+$fontS_B : 3.5rem;  //16px 
 
 $fontW_B : 700;
 $fontW_N : 500;
@@ -28,6 +28,7 @@ $fontW_L : 300;
 h1 {font-size: $fontS_XL;} //slide
 h2 {font-size: $fontS_L;} //Sectiontitle
 h3 {font-size: $fontS_M;} //책 이름, 더보기 
+h4 {font-size: 4.5rem;}
 h6 {font-size: $fontS_S;}
 p,a {font-size: $fontS_B;} //책 소개
 
