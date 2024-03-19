@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RIDIBOOKS</title>
+  <link rel="icon" href="img/common/t_icon.jpg">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://kit.fontawesome.com/02b18b2c57.js" crossorigin="anonymous"></script>
@@ -222,10 +223,9 @@
         <h2>베스트</h2>
         <button>더보기 +</button>
       </div>
-
-      <div class="bookbox">
-        <ul class="bookcontainer">
-          <li class="bestlist">
+      <div class="bookbox swiper mySwiper">
+        <ul class="bookcontainer swiper-wrapper">
+          <li class="bestlist swiper-slide">
             <ol>
               <li class="book"></li>
               <li class="book"></li>
@@ -233,35 +233,35 @@
               </li>
             </ol>
           </li>
-          <li class="bestlist">
+          <li class="bestlist swiper-slide">
             <ol>
               <li class="book"></li>
               <li class="book"></li>
               <li class="book"></li>
             </ol>
           </li>
-          <li class="bestlist">
+          <li class="bestlist swiper-slide">
             <ol>
               <li class="book"></li>
               <li class="book"></li>
               <li class="book"></li>
             </ol>
           </li>
-          <li class="bestlist">
+          <li class="bestlist swiper-slide">
             <ol>
               <li class="book"></li>
               <li class="book"></li>
               <li class="book"></li>
             </ol>
           </li>
-          <li class="bestlist">
+          <li class="bestlist swiper-slide">
             <ol>
               <li class="book"></li>
               <li class="book"></li>
               <li class="book"></li>
             </ol>
           </li>
-          <li class="bestlist">
+          <li class="bestlist swiper-slide">
             <ol>
               <li class="book"></li>
               <li class="book"></li>
@@ -269,10 +269,10 @@
             </ol>
           </li>
         </ul>
-        <div class="btn">
-          <button class="prev"><i class="fa-solid fa-chevron-right"></i></button>
-          <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
+      </div>
+      <div class="btn">
+        <button class="prev swiper-button-prev"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="next swiper-button-next"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
     </section>
     <!-- 새로 나온 책 -->
@@ -283,60 +283,115 @@
           <button>더보기 +</button>
         </div>
         <div class="bookcontainer">
-          <div class="boxL">
-            <div class="bookbox">
-              <div class="bookCover"></div>
-              <div class="bookintro">
-                <h3 class="bookName"></h3>
-                <p class="bookAuthor"></p>
-                <p class="bookContents"></p>
-              </div>
-            </div>
+          <div class="boxWrap">
+            <ul class="boxL">
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <div class="bookintro">
+                  <h3 class="bookName"></h3>
+                  <p class="bookAuthor"></p>
+                  <p class="bookContents"></p>
+                </div>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <div class="bookintro">
+                  <h3 class="bookName"></h3>
+                  <p class="bookAuthor"></p>
+                  <p class="bookContents"></p>
+                </div>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <div class="bookintro">
+                  <h3 class="bookName"></h3>
+                  <p class="bookAuthor"></p>
+                  <p class="bookContents"></p>
+                </div>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <div class="bookintro">
+                  <h3 class="bookName"></h3>
+                  <p class="bookAuthor"></p>
+                  <p class="bookContents"></p>
+                </div>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <div class="bookintro">
+                  <h3 class="bookName"></h3>
+                  <p class="bookAuthor"></p>
+                  <p class="bookContents"></p>
+                </div>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <div class="bookintro">
+                  <h3 class="bookName"></h3>
+                  <p class="bookAuthor"></p>
+                  <p class="bookContents"></p>
+                </div>
+              </li>
+              <li class="bookbox">
+                <div class="bookCover"></div>
+                <div class="bookintro">
+                  <h3 class="bookName"></h3>
+                  <p class="bookAuthor"></p>
+                  <p class="bookContents"></p>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="boxR">
-            <ol class="bookWrap">
-              <li class="bookbox">
+          <div class="boxR swiper mySwiper">
+            <ol class="bookWrap swiper-wrapper">
+              <li class="bookbox swiper-slide">
                 <div class="bookCover"></div>
                 <h3 class="bookName"></h3>
               </li>
-              <li class="bookbox">
+              <li class="bookbox swiper-slide">
                 <div class="bookCover"></div>
                 <h3 class="bookName"></h3>
               </li>
-              <li class="bookbox">
+              <li class="bookbox swiper-slide">
                 <div class="bookCover"></div>
                 <h3 class="bookName"></h3>
               </li>
-              <li class="bookbox">
+              <li class="bookbox swiper-slide">
                 <div class="bookCover"></div>
                 <h3 class="bookName"></h3>
               </li>
-              <li class="bookbox">
+              <li class="bookbox swiper-slide">
                 <div class="bookCover"></div>
                 <h3 class="bookName"></h3>
               </li>
-              <li class="bookbox">
+              <li class="bookbox swiper-slide">
+                <div class="bookCover"></div>
+                <h3 class="bookName"></h3>
+              </li>
+              <li class="bookbox swiper-slide">
                 <div class="bookCover"></div>
                 <h3 class="bookName"></h3>
               </li>
             </ol>
           </div>
           <div class="btn">
-            <button class="prev"><i class="fa-solid fa-chevron-right"></i></button>
-            <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="prev swiper-button-prev"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="next swiper-button-next"><i class="fa-solid fa-chevron-right"></i></button>
           </div>
         </div>
       </div>
     </section>
+    
     <!-- 영화 원작 소설 -->
     <section class="academy container">
       <div class="title">
         <h2>아카데미 수상작 & 후보작 원작</h2>
         <button>더보기 +</button>
       </div>
-      <div class="academybook">
-        <ol class="bookbox">
-          <li class="book">
+      <div class="academybook swiper mySwiper">
+        <ol class="bookbox swiper-wrapper">
+          <li class="book swiper-slide">
             <div class="bookCover">
               <span class="light"></span>
             </div>
@@ -344,7 +399,7 @@
               <h3 class="bookName"></h3>
             </div>
           </li>
-          <li class="book">
+          <li class="book swiper-slide">
             <div class="bookCover">
               <span class="light"></span>
             </div>
@@ -352,7 +407,7 @@
               <h3 class="bookName"></h3>
             </div>
           </li>
-          <li class="book">
+          <li class="book swiper-slide">
             <div class="bookCover">
               <span class="light"></span>
             </div>
@@ -360,7 +415,7 @@
               <h3 class="bookName"></h3>
             </div>
           </li>
-          <li class="book">
+          <li class="book swiper-slide">
             <div class="bookCover">
               <span class="light"></span>
             </div>
@@ -368,7 +423,7 @@
               <h3 class="bookName"></h3>
             </div>
           </li>
-          <li class="book">
+          <li class="book swiper-slide">
             <div class="bookCover">
               <span class="light"></span>
             </div>
@@ -376,9 +431,7 @@
               <h3 class="bookName"></h3>
             </div>
           </li>
-
-
-          <li class="book">
+          <li class="book swiper-slide">
             <div class="bookCover">
               <span class="light"></span>
             </div>
@@ -386,7 +439,7 @@
               <h3 class="bookName"></h3>
             </div>
           </li>
-          <li class="book">
+          <li class="book swiper-slide">
             <div class="bookCover">
               <span class="light"></span>
             </div>
@@ -394,7 +447,7 @@
               <h3 class="bookName"></h3>
             </div>
           </li>
-          <li class="book">
+          <li class="book swiper-slide">
             <div class="bookCover">
               <span class="light"></span>
             </div>
@@ -402,7 +455,7 @@
               <h3 class="bookName"></h3>
             </div>
           </li>
-          <li class="book">
+          <li class="book swiper-slide">
             <div class="bookCover">
               <span class="light"></span>
             </div>
@@ -410,7 +463,7 @@
               <h3 class="bookName"></h3>
             </div>
           </li>
-          <li class="book">
+          <li class="book swiper-slide">
             <div class="bookCover">
               <span class="light"></span>
             </div>
@@ -422,8 +475,8 @@
         </ol>
       </div>
       <div class="btn">
-        <button class="prev"><i class="fa-solid fa-chevron-right"></i></button>
-        <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="prev swiper-button-prev"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="next swiper-button-next"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
     </section>
     <!-- 이벤트 -->

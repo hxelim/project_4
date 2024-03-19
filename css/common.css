@@ -69,7 +69,7 @@ header {
 header .headerTop {
   width: 100%;
   height: 40px;
-  border-bottom: 2px solid rgba(210, 236, 255, 0.5);
+  border-bottom: 1px solid rgba(210, 236, 255, 0.5);
 }
 header .headerTop .container {
   display: flex;

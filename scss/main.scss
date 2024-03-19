@@ -122,8 +122,11 @@ img {width: 100%; height: 100%; object-fit: cover;}
 
 .best {
   height: 440px; @include margin;
-  @include btn_show;
+  @include btn_show; position: relative;
 
+  .btn {
+    @include btn; position: absolute; width: 100%; top: 60%;
+  }
 
   .bookbox {width: 100%; height: 390px; position: relative;
   
@@ -146,12 +149,11 @@ img {width: 100%; height: 100%; object-fit: cover;}
       } 
     }
 
-    .btn {
-      @include btn;
-    }
   }
 
+
     }
+
 
 .new {
   width: 100%;
@@ -194,9 +196,78 @@ img {width: 100%; height: 100%; object-fit: cover;}
   }
 }
 
+
+.new {
+  width: 100%;
+  background-color: $lightblue; @include margin;
+  @include btn_show;
+
+  .container {@include flex; flex-wrap: wrap; 
+    .title {margin-top: 20px;}
+
+  .bookcontainer {width: 100%; height: 400px; margin: 15px 0 30px 0; @include flex; position: relative; 
+  .boxWrap {width: 50%; height: 90%; overflow: hidden;}
+
+    .boxL {width: 100%; height: 100%;  @include flex; position: relative;
+    
+      .bookbox {margin-right: 20px; width: 100%; height: 100%; @include flex; position: absolute; top: 0; left: 0;}
+      .bookCover {width: 230px; background-color: gray; height: 100%; border-radius: 8px;}
+
+      .bookintro {width: 50%; height: 80%; @include flex; flex-wrap: wrap;
+      
+      .bookAuthor {width: 100%; font-weight: $fontW_B;}
+      }
+    }
+    .boxR {width: 40%; height: auto; 
+      .bookWrap {
+        width: 204%; height: 100%; @include flex; align-items: flex-start; margin-left: -159px;
+
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+      
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          // background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+        }
+      
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .bookbox {
+          width: 15%; height: 100%; text-align: center; display: flex; flex-wrap: wrap;
+
+          .bookCover {width: 100%; height: 85%; background-color: gray; border-radius: 8px;}
+
+          .bookName { font-weight: $fontW_N; margin-top: 10px}
+        }
+      }
+    }
+    .btn {@include btn; position: absolute; width: 100%; height: 100%;}
+
+    
+  }
+
+
+  }
+}
+
 .academy {
-  @include btn_show; @include margin;
+  @include btn_show; @include swiper; @include margin;
   height: auto; position: relative; 
+
+
+
   .academybook {width: 100%;
  
     .bookbox {width: 202.2%; @include flex; text-align: center; align-items: flex-start;
@@ -253,7 +324,8 @@ img {width: 100%; height: 100%; object-fit: cover;}
 
 .hit {
   height: 280px; margin-top: 20px;
-  @include flex; @include margin;
+  @include flex; @include margin; @include swiper;
+
   .boxL {width: 25%;
   
     h6 {font-weight: normal;}
@@ -272,27 +344,7 @@ img {width: 100%; height: 100%; object-fit: cover;}
       }
       }
   }
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  
 
 .boxR {
   width: 75%;

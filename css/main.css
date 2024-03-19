@@ -361,6 +361,7 @@ img {
 .best {
   height: 440px;
   margin-bottom: 100px;
+  position: relative;
 }
 .best .title {
   display: flex;
@@ -380,6 +381,103 @@ img {
 }
 .best button:active {
   text-decoration: underline;
+}
+.best .btn {
+  position: absolute;
+  width: 100%;
+  top: 60%;
+}
+.best .btn .prev {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  transform: rotate(-180deg);
+  transform-origin: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.best .btn .prev i {
+  color: #1E9EFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+.best .btn .prev:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  z-index: -1;
+  background-color: rgba(30, 158, 255, 0.5);
+  color: white;
+  border-radius: 50%;
+}
+.best .btn .prev:hover i {
+  color: #666;
+}
+.best .btn .prev:active:after {
+  left: 0;
+  width: 100%;
+}
+.best .btn .prev:active i {
+  color: #fff;
+}
+.best .btn .next {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.best .btn .next i {
+  color: #1E9EFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+.best .btn .next:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  z-index: -1;
+  background-color: rgba(30, 158, 255, 0.5);
+  color: white;
+  border-radius: 50%;
+}
+.best .btn .next:hover i {
+  color: #666;
+}
+.best .btn .next:active:after {
+  left: 0;
+  width: 100%;
+}
+.best .btn .next:active i {
+  color: #fff;
 }
 .best .bookbox {
   width: 100%;
@@ -424,98 +522,6 @@ img {
 }
 .best .bookbox .bookcontainer .bestlist ol .book .bookNamebox {
   width: 60%;
-}
-.best .bookbox .btn .prev {
-  width: 50px;
-  height: 50px;
-  background-color: #eee;
-  border: none;
-  border-radius: 50%;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  cursor: pointer;
-  transform: rotate(-180deg);
-  transform-origin: center;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-.best .bookbox .btn .prev i {
-  color: #1E9EFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 25px;
-}
-.best .bookbox .btn .prev:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  z-index: -1;
-  background-color: rgba(30, 158, 255, 0.5);
-  color: white;
-  border-radius: 50%;
-}
-.best .bookbox .btn .prev:hover i {
-  color: #666;
-}
-.best .bookbox .btn .prev:active:after {
-  left: 0;
-  width: 100%;
-}
-.best .bookbox .btn .prev:active i {
-  color: #fff;
-}
-.best .bookbox .btn .next {
-  width: 50px;
-  height: 50px;
-  background-color: #eee;
-  border: none;
-  border-radius: 50%;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(50%, -50%);
-}
-.best .bookbox .btn .next i {
-  color: #1E9EFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 25px;
-}
-.best .bookbox .btn .next:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  z-index: -1;
-  background-color: rgba(30, 158, 255, 0.5);
-  color: white;
-  border-radius: 50%;
-}
-.best .bookbox .btn .next:hover i {
-  color: #666;
-}
-.best .bookbox .btn .next:active:after {
-  left: 0;
-  width: 100%;
-}
-.best .bookbox .btn .next:active i {
-  color: #fff;
 }
 
 .new {
@@ -722,6 +728,242 @@ img {
   color: #fff;
 }
 
+.new {
+  width: 100%;
+  background-color: #D2ECFF;
+  margin-bottom: 100px;
+}
+.new .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  width: 100%;
+}
+.new button {
+  font-size: 4rem;
+  background: none;
+  border: none;
+  text-align: right;
+  display: inline;
+  font-weight: 700;
+  cursor: pointer;
+}
+.new button:active {
+  text-decoration: underline;
+}
+.new .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.new .container .title {
+  margin-top: 20px;
+}
+.new .container .bookcontainer {
+  width: 100%;
+  height: 400px;
+  margin: 15px 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  position: relative;
+}
+.new .container .bookcontainer .boxWrap {
+  width: 50%;
+  height: 90%;
+  overflow: hidden;
+}
+.new .container .bookcontainer .boxL {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  position: relative;
+}
+.new .container .bookcontainer .boxL .bookbox {
+  margin-right: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.new .container .bookcontainer .boxL .bookCover {
+  width: 230px;
+  background-color: gray;
+  height: 100%;
+  border-radius: 8px;
+}
+.new .container .bookcontainer .boxL .bookintro {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.new .container .bookcontainer .boxL .bookintro .bookAuthor {
+  width: 100%;
+  font-weight: 700;
+}
+.new .container .bookcontainer .boxR {
+  width: 40%;
+  height: auto;
+}
+.new .container .bookcontainer .boxR .bookWrap {
+  width: 204%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  align-items: flex-start;
+  margin-left: -159px;
+}
+.new .container .bookcontainer .boxR .bookWrap .swiper {
+  width: 100%;
+  height: 100%;
+}
+.new .container .bookcontainer .boxR .bookWrap .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new .container .bookcontainer .boxR .bookWrap .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.new .container .bookcontainer .boxR .bookWrap .bookbox {
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.new .container .bookcontainer .boxR .bookWrap .bookbox .bookCover {
+  width: 100%;
+  height: 85%;
+  background-color: gray;
+  border-radius: 8px;
+}
+.new .container .bookcontainer .boxR .bookWrap .bookbox .bookName {
+  font-weight: 500;
+  margin-top: 10px;
+}
+.new .container .bookcontainer .btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.new .container .bookcontainer .btn .prev {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  transform: rotate(-180deg);
+  transform-origin: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.new .container .bookcontainer .btn .prev i {
+  color: #1E9EFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+.new .container .bookcontainer .btn .prev:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  z-index: -1;
+  background-color: rgba(30, 158, 255, 0.5);
+  color: white;
+  border-radius: 50%;
+}
+.new .container .bookcontainer .btn .prev:hover i {
+  color: #666;
+}
+.new .container .bookcontainer .btn .prev:active:after {
+  left: 0;
+  width: 100%;
+}
+.new .container .bookcontainer .btn .prev:active i {
+  color: #fff;
+}
+.new .container .bookcontainer .btn .next {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.new .container .bookcontainer .btn .next i {
+  color: #1E9EFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+.new .container .bookcontainer .btn .next:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  z-index: -1;
+  background-color: rgba(30, 158, 255, 0.5);
+  color: white;
+  border-radius: 50%;
+}
+.new .container .bookcontainer .btn .next:hover i {
+  color: #666;
+}
+.new .container .bookcontainer .btn .next:active:after {
+  left: 0;
+  width: 100%;
+}
+.new .container .bookcontainer .btn .next:active i {
+  color: #fff;
+}
+
 .academy {
   margin-bottom: 100px;
   height: auto;
@@ -745,6 +987,25 @@ img {
 }
 .academy button:active {
   text-decoration: underline;
+}
+.academy .swiper {
+  width: 100%;
+  height: 100%;
+}
+.academy .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.academy .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .academy .academybook {
   width: 100%;
@@ -979,6 +1240,25 @@ img {
   align-content: space-between;
   margin-bottom: 100px;
 }
+.hit .swiper {
+  width: 100%;
+  height: 100%;
+}
+.hit .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hit .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .hit .boxL {
   width: 25%;
 }
@@ -1092,25 +1372,6 @@ img {
 }
 .hit .boxL .btn .next i {
   font-size: 3.5rem;
-}
-.hit .swiper {
-  width: 100%;
-  height: 100%;
-}
-.hit .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hit .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .hit .boxR {
   width: 75%;

@@ -11,7 +11,7 @@ header {
 
   // 헤더 탑
   .headerTop {
-    width: 100%; height: 40px; border-bottom: 2px solid $lightblueT;
+    width: 100%; height: 40px; border-bottom: 1px solid $lightblueT;
 
     .container{
        @include flex;
