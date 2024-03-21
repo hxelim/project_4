@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+html {
+  font-size: 4px;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 4.5rem;
+}
+
+h6 {
+  font-size: 3rem;
+}
+
+p, a {
+  font-size: 3.5rem;
+}
+
+header {
+  height: auto;
+  margin-bottom: 0;
+}
+header .headerBottom .container {
+  border: none;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+  color: #666;
+}
+
+.subcontainer {
+  width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+#contents {
+  width: 930px;
+  height: auto;
+}
+
+.intro {
+  height: 620px;
+  background-color: gold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.intro #bookCover {
+  width: 40%;
+  height: 440px;
+  background-color: gray;
+}
+.intro #bookOrder {
+  width: 50%;
+  height: 440px;
+  background-color: aliceblue;
+}
+.intro #bookInfo {
+  width: 100%;
+  height: 150px;
+  background-color: lightgray;
+}
+
+.bookText h4 {
+  border-bottom: 2px solid gray;
+  padding: 0 0 10px 0;
+}
+.bookText h3 {
+  font-weight: 500;
+}
+.bookText p {
+  margin: 10px 0;
+}
+
+aside {
+  width: calc(100% - 930px);
+  background-color: pink;
+  height: 100px;
+}

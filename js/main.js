@@ -56,6 +56,7 @@ $.ajax({
 
       $('.bestlist .book').eq(i).append("<div class = 'bookNamebox'><h3>" + msg.documents[i].title + "</h3></div>");
       $('.bestlist .book').eq(i).find('.bookNamebox').append("<p>" + msg.documents[i].authors + "</p");
+      $('.bestlist .book').eq(i).append('<a href="#"></a>')
     }
   });
 
