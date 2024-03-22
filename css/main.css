@@ -671,6 +671,9 @@ img {
   align-content: space-between;
   position: relative;
 }
+.new .container .bookcontainer .boxL a:nth-of-type(1) {
+  height: 100%;
+}
 .new .container .bookcontainer .boxL a:nth-of-type(2) {
   width: 50%;
   height: 80%;
@@ -744,6 +747,11 @@ img {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+}
+.new .container .bookcontainer .boxR .bookWrap .bookbox a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .new .container .bookcontainer .boxR .bookWrap .bookbox .bookCover {
   width: 100%;
@@ -1114,6 +1122,16 @@ img {
   background-image: url("../img/main/event3.png");
   background-color: #764448;
 }
+.event .eventwrap .eventB a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
 .event .eventwrap .eventB .text {
   width: 100%;
   color: #fff;
@@ -1295,6 +1313,12 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+}
+.hit .boxR .bookbox li a {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 10;
 }
 .hit .boxR .bookbox li .textbox {
   position: absolute;

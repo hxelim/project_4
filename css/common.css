@@ -163,7 +163,6 @@ header .headerBottom .container .hBline1 {
 header .headerBottom .container .hBline1 a {
   font-size: 9rem;
   font-weight: 1000;
-  width: 250px;
   display: flex;
   line-height: 40px;
   letter-spacing: -1px;
@@ -223,7 +222,6 @@ header .headerBottom .container .hBline1 .Rbox .icons {
   margin-left: 30px;
 }
 header .headerBottom .container .hBline1 .Rbox .icons .icon {
-  width: 20%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -379,4 +377,22 @@ footer .boxBottom .fbottom li:first-child::after {
 }
 footer .boxBottom .fbottom li:nth-of-type(2) {
   font-weight: 700;
+}
+
+#topBtn {
+  background-color: white;
+  width: 58px;
+  height: 58px;
+  bottom: 30px;
+  right: 30px;
+  position: fixed;
+  border-radius: 50%;
+  z-index: 9999;
+  display: none;
+  border: 2px solid #eee;
+}
+#topBtn svg {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
 }

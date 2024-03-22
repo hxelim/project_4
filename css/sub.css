@@ -57,6 +57,12 @@ p, a {
   font-size: 3.5rem;
 }
 
+.container {
+  width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 header {
   height: auto;
   margin-bottom: 0;
@@ -66,7 +72,15 @@ header .headerBottom .container {
   height: auto;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
   color: #666;
 }
 
@@ -80,6 +94,110 @@ h1, h2, h3, h4, h5, h6, p, a, li {
 #contents {
   width: 930px;
   height: auto;
+}
+#contents h4 {
+  border-bottom: 2px solid gray;
+  padding: 10px 0 10px 0;
+}
+#contents .profile h4:nth-of-type(2) {
+  border: none;
+  color: black;
+  margin: 20px 0 10px 0;
+}
+#contents .profile .alarm {
+  background: none;
+  border: 1px solid #1E9EFF;
+  width: 180px;
+  height: 30px;
+  color: #1E9EFF;
+  border-radius: 5px;
+  font-weight: 700;
+  box-shadow: 0 1px 1px 0 rgba(31, 140, 230, 0.3);
+  cursor: pointer;
+}
+#contents .profile .alarm:hover {
+  background-color: rgba(210, 236, 255, 0.5);
+  transition: 0.3s;
+}
+#contents .profile .alarm span.dot {
+  font-size: 15px;
+  vertical-align: 15%;
+}
+#contents .profile .profileupdate {
+  text-align: right;
+  margin: 50px 0 30px 0;
+}
+#contents .profile .profileupdate .update {
+  font-size: 3rem;
+  color: #999;
+  margin-right: 10px;
+}
+#contents .profile .profileupdate .fix {
+  width: 150px;
+  font-size: 3rem;
+  background: none;
+  border: 1px solid #ccc;
+  height: 20px;
+  border-radius: 5px;
+  color: #808991;
+  font-weight: 700;
+  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
+  cursor: pointer;
+}
+#contents .profile .profileupdate .fix:hover {
+  background-color: #eee;
+  transition: 0.3s;
+}
+#contents .profile .authorbook {
+  border-top: 1px solid #eee;
+}
+#contents .profile .authorbook h5 {
+  font-size: 3.8rem;
+  color: black;
+  display: inline-block;
+  margin: 20px 0;
+}
+#contents .profile .authorbook ul.sort {
+  display: flex;
+  float: right;
+  margin: 20px 0;
+}
+#contents .profile .authorbook ul.sort a {
+  font-size: 3rem;
+}
+#contents .profile .authorbook ul.sort .active {
+  color: black;
+  font-weight: bold;
+  font-size: 3rem;
+}
+#contents .profile .authorbook ul.sort li {
+  cursor: pointer;
+  font-size: 3rem;
+}
+#contents .profile .authorbook ul.sort li::before {
+  content: "|";
+  font-size: 3rem;
+  padding: 5px;
+}
+#contents .profile .authorbook ul.sort li:first-child::before {
+  content: "";
+}
+#contents .profile .authorbook ul.bookbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+}
+#contents .profile .authorbook ul.bookbox li {
+  width: 15%;
+  margin: 0 20px;
+}
+#contents .profile .authorbook ul.bookbox li h3 {
+  font-size: 3.8rem;
+}
+#contents .profile .authorbook ul.bookbox li img {
+  width: 100%;
+  height: 100%;
 }
 
 .intro {
@@ -114,12 +232,112 @@ h1, h2, h3, h4, h5, h6, p, a, li {
 .bookText h3 {
   font-weight: 500;
 }
-.bookText p {
+.bookText .text {
+  position: relative;
+  padding-bottom: 30px;
+}
+.bookText .text p {
   margin: 10px 0;
+  overflow: hidden;
+}
+.bookText .text .folded {
+  height: 144px;
+}
+.bookText .text button {
+  float: right;
+  font-size: 3.5rem;
+  background: none;
+  border: none;
+  color: #1E9EFF;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.bookText .text button.close {
+  display: none;
+}
+.bookText .text button span {
+  display: inline-block;
+  background-color: #1E9EFF;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bookText .text button span i {
+  font-size: 10px;
+}
+
+.recommend ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  height: 600px;
+}
+.recommend ul li {
+  width: 15%;
+  margin: 0 20px;
+}
+.recommend ul li h3 {
+  font-size: 3.8rem;
+}
+.recommend ul li img {
+  width: 100%;
+  height: 100%;
 }
 
 aside {
   width: calc(100% - 930px);
   background-color: pink;
   height: 100px;
+}
+aside img {
+  width: 100%;
+}
+aside .best {
+  padding: 30px;
+}
+aside .best h3 {
+  margin-bottom: 20px;
+}
+aside .best ol {
+  counter-reset: ranking 0;
+  display: flex;
+  flex-direction: column;
+}
+aside .best ol li {
+  padding: 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+aside .best ol li a {
+  line-height: 18px;
+  white-space: nowrap;
+}
+aside .best ol li a span {
+  color: #787878;
+  font-size: 14px;
+  line-height: 17px;
+  height: 17px;
+  letter-spacing: -0.01em;
+  flex: 1 1 auto;
+}
+aside .best ol li a:before {
+  counter-increment: ranking;
+  content: counter(ranking) "  ";
+  min-width: 29px;
+  color: #DC3232;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  margin-right: 15px;
+}
+aside .best ol li:last-child a:before {
+  margin-right: 7px;
 }
