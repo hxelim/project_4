@@ -8,6 +8,11 @@
   margin: 0 auto;
 }
 
+th,
+td {
+  font-size: $fontS_S;
+}
+
 // 헤더
 header {
   height: auto;
@@ -43,135 +48,360 @@ li {
 #contents {
   width: 930px;
   height: auto;
+  border-right: 1px solid #eee;
+  padding: 0 30px 0 0;
+
+
+  // 책 소개 첫 화면
+  .intro {
+    height: 620px;
+    @include flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    #bookCover {
+      width: 40%;
+      height: 440px;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      cursor: pointer;
+
+      .turn_img {
+        width: 80%;
+        height: 90%;
+        position: relative;
+        transition: 0.5s;
+        transform-style: preserve-3d;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+        margin: 20px 0 0 30px;
+        cursor: url(/img/sub/mousecursor.png), pointer !important;
+
+        &:hover {
+          transform: rotateY(35deg);
+        }
+
+        &.rotate {
+          transform: rotateY(180deg);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        &::before {
+          content: "";
+          width: 30px;
+          height: 100%;
+          position: absolute;
+          background-image: url(../img/sub/cover_s_fix.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          transform-origin: left;
+          transform: rotateY(90deg);
+          left: 1px;
+        }
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background-size: cover;
+          background-position: center;
+          transform-origin: center;
+          transform: rotateY(180deg) translateZ(30px);
+          background-image: url(../img/sub/cover_b.jpg);
+          width: 100%;
+          height: 100%;
+          left: 2px;
+        }
+      }
+    }
+
+    #bookOrder {
+      width: 55%;
+      height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h6 {
+        font-weight: normal;
+      }
+
+      .title {
+        color: #333;
+      }
+
+
+      .review {
+        display: flex;
+        align-items: center;
+
+        .starbox {
+          background-image: url(../img/sub/star_bg.svg);
+          width: 70px;
+          height: 14px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          margin-right: 5px;
+          position: relative;
+
+          .star {
+            width: 88%;
+            height: 100%;
+            position: relative;
+            display: block;
+            overflow-x: hidden;
+
+            &::after {
+              background-image: url(../img/sub/star.svg);
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-repeat: no-repeat;
+              width: 70px;
+              height: 14px;
+              background-size: 100% 100%;
+              content: "";
+              display: block;
+            }
+          }
+
+
+        }
+
+        p {
+          display: inline;
+        }
+
+        p>span {
+          color: #FA722E;
+          font-weight: bold;
+        }
+      }
+
+      h6>a:hover {
+        color: $blue ;
+      }
+
+      p>a {
+        font-size: 3rem;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+
+      p {
+        font-size: 3rem;
+      }
+
+      .select {
+        font-size: 3rem;
+        font-weight: bold;
+        padding: 7px 7px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        border: {
+          top: 1px solid #eee;
+          bottom: 1px solid #eee;
+        }
+
+        &:hover p {
+          color: $blue;
+        }
+
+        span {
+          background-color: #22b8cf;
+          color: white;
+          padding: 0 2px;
+          border-radius: 2px;
+          font-size: 2rem;
+        }
+      }
+
+      .gray {
+        color: #ddd;
+        cursor: pointer;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        color: #666;
+
+        border : {
+          top: 1px solid #eee;
+          bottom: 1px solid #eee;
+        }
+      }
+
+      tr {
+        width: 100%;
+      }
+
+      th {
+        width: 35%;
+        border-right: 1px solid #eee;
+        background-color: #f7fafc;
+        padding: 5px 7px;
+      }
+
+      .priceT {
+        width: 30%;
+        padding: 5px 7px;
+      }
+
+
+
+      .price {
+        text-align: right;
+        width: 40%;
+        padding: 5px 7px;
+        font-weight: bold;
+
+        span {
+          position: relative;
+        }
+      }
+
+      .blue {
+        color: $blue;
+      }
+
+      .price span::after {
+        content: "          ";
+        background-image: url(../img/sub/arrow.svg);
+        background-position: right;
+        width: 30px;
+        height: 63%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -40%);
+        background-repeat: no-repeat;
+      }
+
+      .btn {
+        float: right;
+        width: 100%;
+        text-align: right;
+      }
+
+      .btn button {
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        margin-left: 5px;
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        color: #777;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: #eee;
+          ;
+        }
+
+        &:last-of-type {
+          font-size: 2.7rem;
+          font-weight: bold;
+          width: 80px;
+          background-color: $blue;
+          color: white;
+
+          &:hover {
+            background-color: #008bf5;
+          }
+        }
+
+
+      }
+
+    }
+
+
+    #bookInfo {
+      width: 100%;
+      height: 150px;
+      border: 5px solid #eee;
+      @include flex;
+      align-items: flex-start;
+      padding: 20px;
+      text-align: left;
+
+
+
+      th {
+        color: #333;
+      }
+
+      td {
+        color: #666;
+      }
+
+      .boxL {
+        width: 50%;
+        height: 100%;
+
+      }
+
+      .boxR {
+        width: 50%;
+        height: 50%;
+
+
+
+
+        svg:nth-of-type(1) {
+          transform: translateY(2px);
+          width: 15px;
+          height: 13px;
+        }
+
+        .fa-apple {
+          font-size: 3.3rem;
+        }
+
+        svg:nth-of-type(2) {
+          transform: translateY(3px);
+          width: 15px;
+          height: 14px;
+        }
+
+        svg:nth-of-type(3) {
+          transform: translateY(3px);
+          width: 15px;
+          height: 14px;
+        }
+
+      }
+    }
+  }
+
 
   h4 {
     border-bottom: 2px solid gray;
     padding: 10px 0 10px 0;
+    clear: both;
   }
 
 
 
 
-  .profile {
-    h4:nth-of-type(2) {
-      border: none;
-      color: black;
-      margin: 20px 0  10px 0;
-    }
-
-    .alarm {
-      background: none;  border: 1px solid $blue; width: 180px; height: 30px; color: $blue; border-radius: 5px; font-weight: $fontW_B; box-shadow: 0 1px 1px 0 rgba(31,140,230,.3); cursor: pointer;
-
-      &:hover {
-        background-color: $lightblueT;
-        transition: 0.3s;
-      }
-
-      span.dot {
-        font-size: 15px; vertical-align: 15%;
-      }
-    }
-  
-   .profileupdate{
-    text-align: right;
-    margin: 50px 0 30px 0;
-
-
-     .update {font-size: 3rem; color: #999; margin-right: 10px;}
-     .fix {width: 150px; font-size: 3rem; background: none; border: 1px solid #ccc; height: 20px; border-radius: 5px; color:#808991; font-weight: $fontW_B; box-shadow: 0 1px 1px 0 rgba(209,213,217,.3);  cursor: pointer;
-    
-      &:hover {background-color: #eee; transition: 0.3s;}
-    }
-   }
-
-
-    .authorbook {
-      border-top: 1px solid #eee;
-      h5 {
-        font-size: 3.8rem;
-        color: black;
-        display: inline-block;
-        margin: 20px 0;
-      }
-
-     
-
-      ul.sort {
-        display: flex;
-        float: right;        margin: 20px 0;
-
-        a {font-size: 3rem;}
-        .active {color: black; font-weight: bold; font-size: 3rem;}
-
-        li {
-          cursor: pointer;
-          font-size: 3rem;
-
-          &::before {
-            content: "|";
-            font-size: 3rem;
-            padding: 5px;
-          }
-
-          &:first-child::before {
-            content: "";
-          }
-        }
-      }
-
-
-        ul.bookbox {
-          display: flex;
-          flex-wrap: wrap;
-          align-content: space-evenly;
-          justify-content: space-evenly;
-      
-          li {
-            width: 15%;
-            margin: 0 20px;
-      
-            h3 {
-              font-size: 3.8rem;
-            }
-      
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
-        }
-      
-
-    }
-
-
-  }
 }
 
-.intro {
-  height: 620px;
-  background-color: gold;
-  @include flex;
-  flex-wrap: wrap;
 
-  #bookCover {
-    width: 40%;
-    height: 440px;
-    background-color: gray;
-  }
-
-  #bookOrder {
-    width: 50%;
-    height: 440px;
-    background-color: aliceblue;
-  }
-
-  #bookInfo {
-    width: 100%;
-    height: 150px;
-    background-color: lightgray;
-  }
-}
 
 .bookText {
   h4 {
@@ -232,6 +462,186 @@ li {
 
 }
 
+
+// 저자 프로필
+.profile {
+  h4:nth-of-type(2) {
+    border: none !important; 
+    color: black;
+    margin: 20px 0 10px 0;
+  }
+
+
+  .alarm {
+    background: none;
+    border: 1px solid $blue;
+    width: 180px;
+    height: 30px;
+    color: $blue;
+    border-radius: 5px;
+    font-weight: $fontW_B;
+    box-shadow: 0 1px 1px 0 rgba(31, 140, 230, .3);
+    cursor: pointer;
+
+    &:hover {
+      background-color: $lightblueT;
+      transition: 0.3s;
+    }
+
+    span.dot {
+      font-size: 15px;
+      vertical-align: 15%;
+    }
+  }
+
+  .profileupdate {
+    text-align: right;
+    margin: 50px 0 30px 0;
+
+
+    .update {
+      font-size: 3rem;
+      color: #999;
+      margin-right: 10px;
+    }
+
+    .fix {
+      width: 150px;
+      font-size: 3rem;
+      background: none;
+      border: 1px solid #ccc;
+      height: 20px;
+      border-radius: 5px;
+      color: #808991;
+      font-weight: $fontW_B;
+      box-shadow: 0 1px 1px 0 rgba(209, 213, 217, .3);
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eee;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  // 대표저서
+  .authorbook {
+    border-top: 1px solid #eee;
+
+    h5 {
+      font-size: 3.8rem;
+      color: black;
+      display: inline-block;
+      margin: 20px 0;
+    }
+
+    ul.sort {
+      display: flex;
+      float: right;
+      margin: 20px 0;
+
+      a {
+        font-size: 3rem;
+      }
+
+      .active {
+        color: black;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+
+      li {
+        cursor: pointer;
+        font-size: 3rem;
+
+        &::before {
+          content: "|";
+          font-size: 3rem;
+          padding: 5px;
+        }
+
+        &:first-child::before {
+          content: "";
+        }
+      }
+    }
+
+
+    ul.bookbox {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-evenly;
+      justify-content: space-evenly;
+
+      li {
+        width: 15%;
+        margin: 0 20px;
+
+        h3 {
+          font-size: 3.8rem;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .all {
+      width: 130px;
+      font-size: 3.2rem;
+      background: none;
+      border: 1px solid #ccc;
+      height: 40px;
+      border-radius: 5px;
+      color: #808991;
+      font-weight: $fontW_B;
+      box-shadow: 0 1px 1px 0 rgba(209, 213, 217, .3);
+      cursor: pointer;
+      float: right;
+
+      &:hover {
+        background-color: #eee;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.review {
+  .reviewlist { 
+    
+    @include flex; flex-wrap: wrap;
+
+    .tab_review {display: flex;
+    
+      li {font-size: $fontS_M; margin-right: 15px; font-weight: bold; color: #999; line-height: 30px;
+      
+        &.active {color: #333; border-bottom: 3px solid black; }
+      }
+    } 
+
+    .starsort {display: flex; 
+      li {
+        a:after {
+          content: "|"; margin: 5px; font-size: 3rem; color: #ccc; line-height: 3.5rem;
+        }
+
+        &.active a {color: #333; font-weight: bold; }
+      }
+      li:last-child a:after {content: "";}
+    }
+
+    .reviewlist_li {width: 100%; font-weight: bold; text-align: center;;
+      border-bottom: 1px solid #eee; border-top: 1px solid #eee; padding: 50px; 
+    }
+  }
+}
+
+
+
+// 이 책과 함께 구매한 책, 이 책과 함께 둘러본 책
 .recommend {
 
   ul {
@@ -260,7 +670,7 @@ li {
 
 
 
-
+// 오른쪽 창
 aside {
   width: calc(100% - 930px);
   background-color: pink;
@@ -326,7 +736,3 @@ aside {
     }
   }
 }
-
-
-
-

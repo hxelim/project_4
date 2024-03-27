@@ -63,6 +63,11 @@ p, a {
   margin: 0 auto;
 }
 
+th,
+td {
+  font-size: 3rem;
+}
+
 header {
   height: auto;
   margin-bottom: 0;
@@ -94,135 +99,285 @@ li {
 #contents {
   width: 930px;
   height: auto;
+  border-right: 1px solid #eee;
+  padding: 0 30px 0 0;
 }
-#contents h4 {
-  border-bottom: 2px solid gray;
-  padding: 10px 0 10px 0;
-}
-#contents .profile h4:nth-of-type(2) {
-  border: none;
-  color: black;
-  margin: 20px 0 10px 0;
-}
-#contents .profile .alarm {
-  background: none;
-  border: 1px solid #1E9EFF;
-  width: 180px;
-  height: 30px;
-  color: #1E9EFF;
-  border-radius: 5px;
-  font-weight: 700;
-  box-shadow: 0 1px 1px 0 rgba(31, 140, 230, 0.3);
-  cursor: pointer;
-}
-#contents .profile .alarm:hover {
-  background-color: rgba(210, 236, 255, 0.5);
-  transition: 0.3s;
-}
-#contents .profile .alarm span.dot {
-  font-size: 15px;
-  vertical-align: 15%;
-}
-#contents .profile .profileupdate {
-  text-align: right;
-  margin: 50px 0 30px 0;
-}
-#contents .profile .profileupdate .update {
-  font-size: 3rem;
-  color: #999;
-  margin-right: 10px;
-}
-#contents .profile .profileupdate .fix {
-  width: 150px;
-  font-size: 3rem;
-  background: none;
-  border: 1px solid #ccc;
-  height: 20px;
-  border-radius: 5px;
-  color: #808991;
-  font-weight: 700;
-  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
-  cursor: pointer;
-}
-#contents .profile .profileupdate .fix:hover {
-  background-color: #eee;
-  transition: 0.3s;
-}
-#contents .profile .authorbook {
-  border-top: 1px solid #eee;
-}
-#contents .profile .authorbook h5 {
-  font-size: 3.8rem;
-  color: black;
-  display: inline-block;
-  margin: 20px 0;
-}
-#contents .profile .authorbook ul.sort {
-  display: flex;
-  float: right;
-  margin: 20px 0;
-}
-#contents .profile .authorbook ul.sort a {
-  font-size: 3rem;
-}
-#contents .profile .authorbook ul.sort .active {
-  color: black;
-  font-weight: bold;
-  font-size: 3rem;
-}
-#contents .profile .authorbook ul.sort li {
-  cursor: pointer;
-  font-size: 3rem;
-}
-#contents .profile .authorbook ul.sort li::before {
-  content: "|";
-  font-size: 3rem;
-  padding: 5px;
-}
-#contents .profile .authorbook ul.sort li:first-child::before {
-  content: "";
-}
-#contents .profile .authorbook ul.bookbox {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-evenly;
-  justify-content: space-evenly;
-}
-#contents .profile .authorbook ul.bookbox li {
-  width: 15%;
-  margin: 0 20px;
-}
-#contents .profile .authorbook ul.bookbox li h3 {
-  font-size: 3.8rem;
-}
-#contents .profile .authorbook ul.bookbox li img {
-  width: 100%;
-  height: 100%;
-}
-
-.intro {
+#contents .intro {
   height: 620px;
-  background-color: gold;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
-.intro #bookCover {
+#contents .intro #bookCover {
   width: 40%;
   height: 440px;
-  background-color: gray;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
 }
-.intro #bookOrder {
-  width: 50%;
+#contents .intro #bookCover .turn_img {
+  width: 80%;
+  height: 90%;
+  position: relative;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px 0 0 30px;
+  cursor: url(/img/sub/mousecursor.png), pointer !important;
+}
+#contents .intro #bookCover .turn_img:hover {
+  transform: rotateY(35deg);
+}
+#contents .intro #bookCover .turn_img.rotate {
+  transform: rotateY(180deg);
+}
+#contents .intro #bookCover .turn_img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#contents .intro #bookCover .turn_img::before {
+  content: "";
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  background-image: url(../img/sub/cover_s_fix.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform-origin: left;
+  transform: rotateY(90deg);
+  left: 1px;
+}
+#contents .intro #bookCover .turn_img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(30px);
+  background-image: url(../img/sub/cover_b.jpg);
+  width: 100%;
+  height: 100%;
+  left: 2px;
+}
+#contents .intro #bookOrder {
+  width: 55%;
   height: 440px;
-  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.intro #bookInfo {
+#contents .intro #bookOrder h6 {
+  font-weight: normal;
+}
+#contents .intro #bookOrder .title {
+  color: #333;
+}
+#contents .intro #bookOrder .review {
+  display: flex;
+  align-items: center;
+}
+#contents .intro #bookOrder .review .starbox {
+  background-image: url(../img/sub/star_bg.svg);
+  width: 70px;
+  height: 14px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  position: relative;
+}
+#contents .intro #bookOrder .review .starbox .star {
+  width: 88%;
+  height: 100%;
+  position: relative;
+  display: block;
+  overflow-x: hidden;
+}
+#contents .intro #bookOrder .review .starbox .star::after {
+  background-image: url(../img/sub/star.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 14px;
+  background-size: 100% 100%;
+  content: "";
+  display: block;
+}
+#contents .intro #bookOrder .review p {
+  display: inline;
+}
+#contents .intro #bookOrder .review p > span {
+  color: #FA722E;
+  font-weight: bold;
+}
+#contents .intro #bookOrder h6 > a:hover {
+  color: #1E9EFF;
+}
+#contents .intro #bookOrder p > a {
+  font-size: 3rem;
+}
+#contents .intro #bookOrder p > a:hover {
+  color: #1E9EFF;
+}
+#contents .intro #bookOrder p {
+  font-size: 3rem;
+}
+#contents .intro #bookOrder .select {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 7px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+#contents .intro #bookOrder .select:hover p {
+  color: #1E9EFF;
+}
+#contents .intro #bookOrder .select span {
+  background-color: #22b8cf;
+  color: white;
+  padding: 0 2px;
+  border-radius: 2px;
+  font-size: 2rem;
+}
+#contents .intro #bookOrder .gray {
+  color: #ddd;
+  cursor: pointer;
+}
+#contents .intro #bookOrder table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #666;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+#contents .intro #bookOrder tr {
+  width: 100%;
+}
+#contents .intro #bookOrder th {
+  width: 35%;
+  border-right: 1px solid #eee;
+  background-color: #f7fafc;
+  padding: 5px 7px;
+}
+#contents .intro #bookOrder .priceT {
+  width: 30%;
+  padding: 5px 7px;
+}
+#contents .intro #bookOrder .price {
+  text-align: right;
+  width: 40%;
+  padding: 5px 7px;
+  font-weight: bold;
+}
+#contents .intro #bookOrder .price span {
+  position: relative;
+}
+#contents .intro #bookOrder .blue {
+  color: #1E9EFF;
+}
+#contents .intro #bookOrder .price span::after {
+  content: "          ";
+  background-image: url(../img/sub/arrow.svg);
+  background-position: right;
+  width: 30px;
+  height: 63%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -40%);
+  background-repeat: no-repeat;
+}
+#contents .intro #bookOrder .btn {
+  float: right;
+  width: 100%;
+  text-align: right;
+}
+#contents .intro #bookOrder .btn button {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  margin-left: 5px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #777;
+  transition: 0.3s;
+}
+#contents .intro #bookOrder .btn button:hover {
+  background-color: #eee;
+}
+#contents .intro #bookOrder .btn button:last-of-type {
+  font-size: 2.7rem;
+  font-weight: bold;
+  width: 80px;
+  background-color: #1E9EFF;
+  color: white;
+}
+#contents .intro #bookOrder .btn button:last-of-type:hover {
+  background-color: #008bf5;
+}
+#contents .intro #bookInfo {
   width: 100%;
   height: 150px;
-  background-color: lightgray;
+  border: 5px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  text-align: left;
+}
+#contents .intro #bookInfo th {
+  color: #333;
+}
+#contents .intro #bookInfo td {
+  color: #666;
+}
+#contents .intro #bookInfo .boxL {
+  width: 50%;
+  height: 100%;
+}
+#contents .intro #bookInfo .boxR {
+  width: 50%;
+  height: 50%;
+}
+#contents .intro #bookInfo .boxR svg:nth-of-type(1) {
+  transform: translateY(2px);
+  width: 15px;
+  height: 13px;
+}
+#contents .intro #bookInfo .boxR .fa-apple {
+  font-size: 3.3rem;
+}
+#contents .intro #bookInfo .boxR svg:nth-of-type(2) {
+  transform: translateY(3px);
+  width: 15px;
+  height: 14px;
+}
+#contents .intro #bookInfo .boxR svg:nth-of-type(3) {
+  transform: translateY(3px);
+  width: 15px;
+  height: 14px;
+}
+#contents h4 {
+  border-bottom: 2px solid gray;
+  padding: 10px 0 10px 0;
+  clear: both;
 }
 
 .bookText h4 {
@@ -269,6 +424,171 @@ li {
 }
 .bookText .text button span i {
   font-size: 10px;
+}
+
+.profile h4:nth-of-type(2) {
+  border: none !important;
+  color: black;
+  margin: 20px 0 10px 0;
+}
+.profile .alarm {
+  background: none;
+  border: 1px solid #1E9EFF;
+  width: 180px;
+  height: 30px;
+  color: #1E9EFF;
+  border-radius: 5px;
+  font-weight: 700;
+  box-shadow: 0 1px 1px 0 rgba(31, 140, 230, 0.3);
+  cursor: pointer;
+}
+.profile .alarm:hover {
+  background-color: rgba(210, 236, 255, 0.5);
+  transition: 0.3s;
+}
+.profile .alarm span.dot {
+  font-size: 15px;
+  vertical-align: 15%;
+}
+.profile .profileupdate {
+  text-align: right;
+  margin: 50px 0 30px 0;
+}
+.profile .profileupdate .update {
+  font-size: 3rem;
+  color: #999;
+  margin-right: 10px;
+}
+.profile .profileupdate .fix {
+  width: 150px;
+  font-size: 3rem;
+  background: none;
+  border: 1px solid #ccc;
+  height: 20px;
+  border-radius: 5px;
+  color: #808991;
+  font-weight: 700;
+  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
+  cursor: pointer;
+}
+.profile .profileupdate .fix:hover {
+  background-color: #eee;
+  transition: 0.3s;
+}
+.profile .authorbook {
+  border-top: 1px solid #eee;
+}
+.profile .authorbook h5 {
+  font-size: 3.8rem;
+  color: black;
+  display: inline-block;
+  margin: 20px 0;
+}
+.profile .authorbook ul.sort {
+  display: flex;
+  float: right;
+  margin: 20px 0;
+}
+.profile .authorbook ul.sort a {
+  font-size: 3rem;
+}
+.profile .authorbook ul.sort .active {
+  color: black;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.profile .authorbook ul.sort li {
+  cursor: pointer;
+  font-size: 3rem;
+}
+.profile .authorbook ul.sort li::before {
+  content: "|";
+  font-size: 3rem;
+  padding: 5px;
+}
+.profile .authorbook ul.sort li:first-child::before {
+  content: "";
+}
+.profile .authorbook ul.bookbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+}
+.profile .authorbook ul.bookbox li {
+  width: 15%;
+  margin: 0 20px;
+}
+.profile .authorbook ul.bookbox li h3 {
+  font-size: 3.8rem;
+}
+.profile .authorbook ul.bookbox li img {
+  width: 100%;
+  height: 100%;
+}
+.profile .authorbook .all {
+  width: 130px;
+  font-size: 3.2rem;
+  background: none;
+  border: 1px solid #ccc;
+  height: 40px;
+  border-radius: 5px;
+  color: #808991;
+  font-weight: 700;
+  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
+  cursor: pointer;
+  float: right;
+}
+.profile .authorbook .all:hover {
+  background-color: #eee;
+  transition: 0.3s;
+}
+
+.review .reviewlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.review .reviewlist .tab_review {
+  display: flex;
+}
+.review .reviewlist .tab_review li {
+  font-size: 4rem;
+  margin-right: 15px;
+  font-weight: bold;
+  color: #999;
+  line-height: 30px;
+}
+.review .reviewlist .tab_review li.active {
+  color: #333;
+  border-bottom: 3px solid black;
+}
+.review .reviewlist .starsort {
+  display: flex;
+}
+.review .reviewlist .starsort li a:after {
+  content: "|";
+  margin: 5px;
+  font-size: 3rem;
+  color: #ccc;
+  line-height: 3.5rem;
+}
+.review .reviewlist .starsort li.active a {
+  color: #333;
+  font-weight: bold;
+}
+.review .reviewlist .starsort li:last-child a:after {
+  content: "";
+}
+.review .reviewlist .reviewlist_li {
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  padding: 50px;
 }
 
 .recommend ul {

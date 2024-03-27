@@ -32,3 +32,8 @@ $('.info').find('.close').click(function(){
   $(this).hide()
 });
 
+
+
+$('#bookCover').click(function(){
+  $('.turn_img').toggleClass('rotate')
+})
