@@ -1,17 +1,17 @@
 // 텍스트 삽입
-$.get('/img/sub/sub_text/txt1.txt', function (data) {
+$.get('./img/sub/sub_text/txt1.txt', function (data) {
   $('.bookSub .text').prepend(data);
 })
 
-$.get('/img/sub/sub_text/txt2.txt', function (data) {
+$.get('./img/sub/sub_text/txt2.txt', function (data) {
   $('.publisher .text').prepend(data);
 })
 
-$.get('/img/sub/sub_text/txt3.txt', function (data) {
+$.get('./img/sub/sub_text/txt3.txt', function (data) {
   $('.author .text').prepend(data);
 })
 
-$.get('/img/sub/sub_text/txt4.txt', function (data) {
+$.get('./img/sub/sub_text/txt4.txt', function (data) {
   $('.index .text').prepend(data);
 })
 
