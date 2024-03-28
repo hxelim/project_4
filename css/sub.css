@@ -544,12 +544,238 @@ li {
   transition: 0.3s;
 }
 
+.review .reviewbox {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+.review .reviewbox .buyergrade {
+  width: 20%;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.review .reviewbox .buyergrade h2 {
+  font-size: 7rem;
+}
+.review .reviewbox .buyergrade p {
+  font-size: 3rem;
+  color: #94a2b8;
+  margin-top: 5px;
+}
+.review .reviewbox .buyergrade .star {
+  background-image: url(../img/sub/star_bg.svg);
+  width: 80px;
+  background-repeat: no-repeat;
+}
+.review .reviewbox .buyergrade .star span {
+  width: 88%;
+  overflow: hidden;
+  height: 100%;
+  display: block;
+}
+.review .reviewbox .buyergrade .star span img {
+  width: 80px;
+}
+.review .reviewbox .buyergrade .graph {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.review .reviewbox .buyergrade .graph li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review .reviewbox .buyergrade .graph li:nth-of-type(1) .block:after {
+  width: 64%;
+}
+.review .reviewbox .buyergrade .graph li:nth-of-type(2) .block:after {
+  width: 27%;
+}
+.review .reviewbox .buyergrade .graph li:nth-of-type(3) .block:after {
+  width: 0%;
+}
+.review .reviewbox .buyergrade .graph li:nth-of-type(4) .block:after {
+  width: 9%;
+}
+.review .reviewbox .buyergrade .graph li:nth-of-type(5) .block:after {
+  width: 0%;
+}
+.review .reviewbox .buyergrade .graph li i {
+  font-size: 2.5rem;
+  color: #808991;
+  margin-right: 3px;
+}
+.review .reviewbox .buyergrade .graph li span {
+  font-size: 3rem;
+  color: #808991;
+}
+.review .reviewbox .buyergrade .graph .block {
+  margin-left: 10px;
+  width: 80px;
+  background-color: #e8edf3;
+  height: 8px;
+  display: block;
+  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.review .reviewbox .buyergrade .graph .block::after {
+  content: "";
+  background: linear-gradient(to bottom, #9daab5, #718392);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.review .reviewbox .reviewwrite {
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+.review .reviewbox .reviewwrite h4 {
+  border: none !important;
+  color: #999;
+  margin-top: 20px;
+}
+.review .reviewbox .reviewwrite .starRatebox {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4.5rem;
+  background-color: #008bf5;
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px;
+  display: none;
+}
+.review .reviewbox .reviewwrite .starRatebox p {
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+}
+.review .reviewbox .reviewwrite .starRatebox p span {
+  position: absolute;
+  bottom: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #008bf5;
+  font-size: 5rem;
+}
+.review .reviewbox .reviewwrite .starRate {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+.review .reviewbox .reviewwrite .starRate label {
+  font-size: 35px;
+  color: transparent;
+  text-shadow: 0 0 0 #f0f0f0;
+  cursor: pointer;
+}
+.review .reviewbox .reviewwrite .starRate label:hover {
+  text-shadow: 0 0 0 #FA722E;
+}
+.review .reviewbox .reviewwrite .starRate label:hover ~ label {
+  text-shadow: 0 0 0 #FA722E;
+}
+.review .reviewbox .reviewwrite .starRate input[type=radio] {
+  display: none;
+}
+.review .reviewbox .reviewwrite .starRate input[type=radio]:checked ~ label {
+  text-shadow: 0 0 0 #FA722E;
+}
+.review .reviewbox .reviewwrite .textarea textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
+  padding: 10px;
+  font-weight: bold;
+}
+.review .reviewbox .reviewwrite .textarea .btn {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+.review .reviewbox .reviewwrite .textarea .btn button:first-child {
+  float: left;
+  background: none;
+  width: 150px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
+  cursor: pointer;
+  color: #666;
+  font-size: 3rem;
+}
+.review .reviewbox .reviewwrite .textarea .btn .spoilerWrap {
+  width: 64%;
+  text-align: right;
+}
+.review .reviewbox .reviewwrite .textarea .btn .spoilerWrap input[type=checkbox] {
+  width: 17px;
+  height: 17px;
+  vertical-align: sub;
+  margin-right: 5px;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+.review .reviewbox .reviewwrite .textarea .btn .spoilerWrap label {
+  font-size: 3.5rem;
+  margin-right: 10px;
+  line-height: 17px;
+  cursor: pointer;
+}
+.review .reviewbox .reviewwrite .textarea .btn button:last-child {
+  width: 100px;
+  height: 30px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.review .reviewbox .reviewwrite .reviewalert {
+  display: none;
+  text-align: left;
+  background-color: #f2f4f5;
+  padding: 20px;
+}
+.review .reviewbox .reviewwrite .reviewalert p {
+  font-size: 3rem;
+}
+.review .reviewbox .reviewwrite .reviewalert p b {
+  color: #333;
+}
+.review .reviewbox .reviewwrite .reviewalert ol {
+  width: 100%;
+}
+.review .reviewbox .reviewwrite .reviewalert ol li {
+  font-size: 3rem;
+  margin-left: 15px;
+  list-style: decimal;
+}
 .review .reviewlist {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 .review .reviewlist .tab_review {
   display: flex;
@@ -589,6 +815,24 @@ li {
   border-bottom: 1px solid #eee;
   border-top: 1px solid #eee;
   padding: 50px;
+}
+.review .reviewlist button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 3.5rem;
+  color: gray;
+  font-weight: normal;
+  margin: 20px 0;
+}
+.review .reviewlist .buyerinfo {
+  width: 100%;
+  background-color: #f3f4f5;
+  padding: 30px 20px;
+  display: none;
+}
+.review .reviewlist .buyerinfo p:first-of-type {
+  color: black;
 }
 
 .recommend ul {

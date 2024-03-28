@@ -33,7 +33,40 @@ $('.info').find('.close').click(function(){
 });
 
 
-
+// 책 소개 커버화면
 $('#bookCover').click(function(){
   $('.turn_img').toggleClass('rotate')
+})
+
+$('.alert').click(function(){
+  $('.reviewalert').toggle()
+})
+
+
+
+
+// 구매자 표시 기준 접기, 펼치기
+$('.qna').click(function(){
+  $('.buyerinfo').slideToggle('slow', function(){
+    if ($('.buyerinfo').css("display")=='block'){
+    $('.qna span').html('<i class="fa-solid fa-angles-up"></i>')
+  } else {
+    $('.qna span').html('<i class="fa-solid fa-angles-down"></i>')
+  }
+  });  
+})
+
+
+// $('.starRate').click(function(){
+//   confirm('로그인 상태에서 가능합니다. 로그인 페이지로 이동합니다.')
+// })
+
+
+$('.starRate label').hover(function(){
+  let i = $(this).index()
+  console.log(i)
+  $('.starRatebox').css('display','block')
+  
+}, function(){
+  $('.starRatebox').hide()
 })

@@ -254,7 +254,95 @@
         </div>
         <div class="review">
           <h4>리뷰</h4>
-          <div class="reviewbox"></div>
+          <div class="reviewbox">
+            <div class="buyergrade">
+              <h6>구매자 평점</h6>
+              <h2>4.4</h2>
+              <div class="star">
+                <span><img src="img/sub/star.svg" alt=""></span>
+              </div>
+              <ul class="graph">
+                <li>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="num">5</span>
+                  <span class="block"></span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="num">4</span>
+                  <span class="block"></span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="num">3</span>
+                  <span class="block"></span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="num">2</span>
+                  <span class="block"></span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="num">1</span>
+                  <span class="block"></span>
+                </li>
+              </ul>
+              <p>10명이 평가함</p>
+            </div>
+            <div class="reviewwrite">
+              <div class="userReview">
+                <h4>이 책을 평가해주세요!</h4>
+                <div class="starRatebox">
+                  <p><span>▼</span>별로예요</p>
+                  <p><span>▼</span>그저 그래요</p>
+                  <p><span>▼</span>보통이에요</p>
+                  <p><span>▼</span>좋아요</p>
+                  <p><span>▼</span>최고예요</p>
+                </div>
+              </div>
+              <div class="starRate">
+                <input type="radio" name="rating" id="rate1" value="5">
+                <label for="rate1">⭐</label>
+                <input type="radio" name="rating" id="rate2" value="4">
+                <label for="rate2">⭐</label>
+                <input type="radio" name="rating" id="rate3" value="3">
+                <label for="rate3">⭐</label>
+                <input type="radio" name="rating" id="rate4" value="3">
+                <label for="rate4">⭐</label>
+                <input type="radio" name="rating" id="rate5" value="1">
+                <label for="rate5">⭐</label>
+              </div>
+              <div class="textarea">
+                <textarea name="" id="" cols="30" rows="10" placeholder="리뷰 작성 시 광고 및 욕설, 비속어나 타인을 비방하는 문구를 사용하시면 비공개됭 수 있습니다." ></textarea>
+                <div class="btn">
+                  <button class="alert"><i class="fa-solid fa-triangle-exclamation"></i> 리뷰 작성 유의사항</button>
+                  <div class="spoilerWrap">
+                    <input type="checkbox" name="spoiler" id="spoiler">
+                    <label for="spoiler">스포일러가 있습니다.</label>
+                  </div>
+                  <button>리뷰 남기기</button>
+                </div>
+              </div>
+              <div class="reviewalert">
+                <p><b>건전한 리뷰 정착 및 양질의 리뷰를 위해 아래 해당하는 리뷰는 비공개 조치될 수 있음을 안내드립니다.</b></p> <br><br>
+                <ol>
+                  <li>타인에게 불쾌감을 주는 욕설</li>
+                  <li>비속어나 타인을 비방하는 내용</li>
+                  <li>특정 종교, 민족, 계층을 비방하는 내용</li>
+                  <li>해당 도서의 줄거리나 리디 서비스 이용과 관련이 없는 내용</li>
+                  <li>의미를 알 수 없는 내용</li>
+                  <li>광고 및 반복적인 글을 게시하여 서비스 품질을 떨어트리는 내용</li>
+                  <li>저작권상 문제의 소지가 있는 내용</li>
+                  <li>다른 리뷰에 대한 반박이나 논쟁을 유발하는 내용</li>
+                  <p>* 결말을 예상할 수 있는 리뷰는 자제하여 주시기 바랍니다.</p>
+                  <br><br>
+                  <p><b>이 외에도 건전한 리뷰 문화 형성을 위한 운영 목적과 취지에 맞지 않는 내용은 담당자에 의해 리뷰가 비공개 처리가 될 수 있습니다.</b></p>
+                </ol>
+              </div>
+            </div>
+          </div>
+
           <div class="reviewlist">
             <ul class="tab_review">
               <li class="active">구매자</li>
@@ -269,7 +357,18 @@
             <div class="reviewlist_li">
               <p>아직 등록된 리뷰가 없습니다. <br>첫 번째 리뷰를 남겨주세요!</p>
             </div>
-            <p>구매자 표시 기준은 무엇인가요?</p>
+            <button class="qna"><b>구매자 표시 기준은 무엇인가요? <span><i class="fa-solid fa-angles-down"></i></span></b></button>
+            <div class="buyerinfo">
+              <p>'구매자' 표시는 리디에서 유료도서 결제 후 다운로드 하시거나 리디셀렉트 도서를 다운로드하신 경우에만 표시됩니다.</p><br><br>
+              <p><b>무료 도서 (프로모션 등으로 무료로 전환된 도서 포함)</b> <br>
+                '구매자'로 표시되지 않습니다.</p><br><br>
+              <p><b>시리즈 도서 내 무료 도서</b> <br>
+                '구매자’로 표시되지 않습니다. 하지만 같은 시리즈의 유료 도서를 결제한 뒤 리뷰를 수정하거나 재등록하면 '구매자'로 표시됩니다.</p> <br><br>
+              <p><b>영구 삭제 </b><br>
+                도서를 영구 삭제해도 ‘구매자’ 표시는 남아있습니다.</p><br><br>
+              <p><b>결제 취소 </b><br>
+                ‘구매자’ 표시가 자동으로 사라집니다.</p>
+            </div>
           </div>
         </div>
         <div class="recommend r1">
