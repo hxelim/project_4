@@ -84,7 +84,7 @@ img {
           margin: 0 9px 0 0;
           flex-basis: 50px;
           flex-grow: 0;
-          text-wrap: nowrap;
+          white-space: nowrap;
 
           // &:first-of-type .num {display: block;}
 
@@ -98,7 +98,7 @@ img {
             bottom: 0;
             right: 0;
             margin: 50px;
-            text-wrap: nowrap;
+            white-space: nowrap;
             display: none;
 
 
@@ -129,7 +129,7 @@ img {
           }
 
           .text {
-            text-wrap: nowrap;
+            white-space: nowrap;
             color: $white;
             position: absolute;
             bottom: 0;

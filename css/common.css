@@ -162,7 +162,7 @@ header .headerBottom .container .hBline1 {
 }
 header .headerBottom .container .hBline1 a {
   font-size: 9rem;
-  font-weight: 1000;
+  font-weight: 900;
   display: flex;
   line-height: 40px;
   letter-spacing: -1px;
@@ -170,7 +170,7 @@ header .headerBottom .container .hBline1 a {
 header .headerBottom .container .hBline1 .ridiWebtoon {
   width: 250px;
   font-size: 9rem;
-  font-weight: 1000;
+  font-weight: 900;
   letter-spacing: -1px;
   line-height: 40px;
   display: flex;

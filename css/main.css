@@ -136,7 +136,7 @@ img {
   margin: 0 9px 0 0;
   flex-basis: 50px;
   flex-grow: 0;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 .main .container .slideWrap .slide li .num {
   background-color: rgba(66, 66, 66, 0.4);
@@ -148,7 +148,7 @@ img {
   bottom: 0;
   right: 0;
   margin: 50px;
-  text-wrap: nowrap;
+  white-space: nowrap;
   display: none;
 }
 .main .container .slideWrap .slide li .num p {
@@ -170,7 +170,7 @@ img {
   height: 100%;
 }
 .main .container .slideWrap .slide li .text {
-  text-wrap: nowrap;
+  white-space: nowrap;
   color: #fff;
   position: absolute;
   bottom: 0;

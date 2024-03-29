@@ -74,7 +74,7 @@ li {
         transform-style: preserve-3d;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
         margin: 20px 0 0 30px;
-        cursor: url(/img/sub/mousecursor.png), pointer !important;
+        cursor: url(../img/sub/mousecursor.png), pointer !important;
 
         &:hover {
           transform: rotateY(35deg);
@@ -553,7 +553,7 @@ li {
       li {
         cursor: pointer;
         font-size: 3rem;
-
+        
         &::before {
           content: "|";
           font-size: 3rem;
@@ -563,6 +563,8 @@ li {
         &:first-child::before {
           content: "";
         }
+
+        
       }
     }
 
@@ -576,6 +578,8 @@ li {
       li {
         width: 15%;
         margin: 0 20px;
+        position: relative;
+
 
         h3 {
           font-size: 3.8rem;
@@ -585,6 +589,8 @@ li {
           width: 100%;
           height: 100%;
         }
+
+        a {width: 100%; height: 100%; position: absolute; top: 0; left: 0;} 
       }
     }
 
@@ -665,20 +671,24 @@ li {
     
     } 
     .reviewwrite {
-      width: 80%; height: 100%;  text-align: center; position: relative;;
+      width: 80%; height: 100%;  text-align: center; position: relative;
+
+      .userReview {position: relative;}
     
       h4 {border: none !important; color: #999; margin-top: 20px;}
 
       .starRatebox {position: absolute; top: 10% ; left: 50%; transform: translateX(-50%); font-size: 4.5rem; background-color: #008bf5; width: 150px; height: 35px; line-height: 35px; border-radius: 5px;
         display: none;
       
-        p {color: white; position: absolute;  left: 50%; transform: translateX(-50%); font-weight: bold;
+        p {color: white; position: absolute;  left: 50%; transform: translateX(-50%); font-weight: bold; display: none;
         
           span {position: absolute; bottom: -19px; left: 50%; transform: translateX(-50%); color: #008bf5; font-size: 5rem; }
         }
       }
 
       .starRate {width: 100%; margin-bottom: 20px; display: flex; justify-content: center; flex-direction: row-reverse;
+
+        .emptybox {width: 50%;}
       
         label {font-size: 35px; color: transparent; text-shadow: 0 0 0 #f0f0f0; cursor: pointer;
         
@@ -807,6 +817,7 @@ li {
     li {
       width: 15%;
       margin: 0 20px;
+      position: relative;
 
       h3 {
         font-size: 3.8rem;
@@ -816,6 +827,8 @@ li {
         width: 100%;
         height: 100%;
       }
+
+      a {width: 100%; height: 100%; display: block; position: absolute; top: 0; left: 0;}
     }
   }
 

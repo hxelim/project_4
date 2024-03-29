@@ -67,11 +67,11 @@ header {
       .hBline1{
         @include flex; 
         height: 40px; width: 100%;
-        a {font-size: 9rem; font-weight: 1000;
+        a {font-size: 9rem; font-weight: 900;
           // width: 250px;
            display: flex; line-height: 40px; letter-spacing: -1px;}
         .ridiWebtoon {
-          width: 250px; font-size: 9rem; font-weight: 1000; letter-spacing: -1px; line-height: 40px; display: flex;
+          width: 250px; font-size: 9rem; font-weight: 900; letter-spacing: -1px; line-height: 40px; display: flex;
 
           .Word1 {
               color: $blue;

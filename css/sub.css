@@ -126,7 +126,7 @@ li {
   transform-style: preserve-3d;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   margin: 20px 0 0 30px;
-  cursor: url(/img/sub/mousecursor.png), pointer !important;
+  cursor: url(../img/sub/mousecursor.png), pointer !important;
 }
 #contents .intro #bookCover .turn_img:hover {
   transform: rotateY(35deg);
@@ -518,6 +518,7 @@ li {
 .profile .authorbook ul.bookbox li {
   width: 15%;
   margin: 0 20px;
+  position: relative;
 }
 .profile .authorbook ul.bookbox li h3 {
   font-size: 3.8rem;
@@ -525,6 +526,13 @@ li {
 .profile .authorbook ul.bookbox li img {
   width: 100%;
   height: 100%;
+}
+.profile .authorbook ul.bookbox li a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .profile .authorbook .all {
   width: 130px;
@@ -636,6 +644,9 @@ li {
   text-align: center;
   position: relative;
 }
+.review .reviewbox .reviewwrite .userReview {
+  position: relative;
+}
 .review .reviewbox .reviewwrite h4 {
   border: none !important;
   color: #999;
@@ -660,6 +671,7 @@ li {
   left: 50%;
   transform: translateX(-50%);
   font-weight: bold;
+  display: none;
 }
 .review .reviewbox .reviewwrite .starRatebox p span {
   position: absolute;
@@ -675,6 +687,9 @@ li {
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
+}
+.review .reviewbox .reviewwrite .starRate .emptybox {
+  width: 50%;
 }
 .review .reviewbox .reviewwrite .starRate label {
   font-size: 35px;
@@ -845,6 +860,7 @@ li {
 .recommend ul li {
   width: 15%;
   margin: 0 20px;
+  position: relative;
 }
 .recommend ul li h3 {
   font-size: 3.8rem;
@@ -852,6 +868,14 @@ li {
 .recommend ul li img {
   width: 100%;
   height: 100%;
+}
+.recommend ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 aside {

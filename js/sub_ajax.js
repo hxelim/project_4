@@ -29,6 +29,8 @@ $.ajax({
       $(divs).eq(i).append("<div class='bookCover'><img src = '" + data[i].thumbnail + "'></div>")
       $(divs).eq(i).append("<h3>"+newStr()+"</h3>")
       $(divs).eq(i).append("<p>"+data[i].authors+"</p>")
+      $(divs).eq(i).append('<a href="#"></a>')
+
 
 
        
@@ -69,6 +71,7 @@ $.ajax({
       $(divs).eq(i).append("<div class='bookCover'><img src = '" + data[i].thumbnail + "'></div>")      
       $(divs).eq(i).append("<h3>"+newStr()+"</h3>")
       $(divs).eq(i).append("<p>"+data[i].authors+"</p>")
+      $(divs).eq(i).append("<a href='#'></a>")
     }
   });
 
@@ -90,16 +93,8 @@ $.ajax({
 
       $(divs).eq(i).append("<div class = 'bookNamebox'><h3>" + msg.documents[i].title + "</h3></div>");
       $(divs).eq(i).append('<a href="#"></a>')
+
     }
-
-
-
-    // let list = msg.document[i].title;
-    // console.log(list)
-
-    // $('.sort li').eq(1).find('a').click(function(){
-    //   list.sort();
-    // })
   });
 
 
