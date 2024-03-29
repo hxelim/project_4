@@ -126,7 +126,7 @@ li {
   transform-style: preserve-3d;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   margin: 20px 0 0 30px;
-  cursor: url(../img/sub/mousecursor.png), pointer !important;
+  cursor: url(../img/sub/ico_flip.svg), pointer !important;
 }
 #contents .intro #bookCover .turn_img:hover {
   transform: rotateY(35deg);
